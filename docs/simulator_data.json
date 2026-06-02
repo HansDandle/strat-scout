@@ -1,0 +1,5983 @@
+{
+  "random_trials": {
+    "label": "Random Trials",
+    "periods": [
+      {
+        "month": "2018-01-01",
+        "ret": 5.74,
+        "nav": 10574.0,
+        "spy_nav": 10305.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "QID",
+          "TBT"
+        ]
+      },
+      {
+        "month": "2018-01-15",
+        "ret": 0.05,
+        "nav": 10579.0,
+        "spy_nav": 10592.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "QID"
+        ]
+      },
+      {
+        "month": "2018-01-29",
+        "ret": 2.02,
+        "nav": 10793.0,
+        "spy_nav": 9872.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "TBF",
+          "PSQ",
+          "QID"
+        ]
+      },
+      {
+        "month": "2018-02-12",
+        "ret": -3.43,
+        "nav": 10423.0,
+        "spy_nav": 10340.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "PSQ"
+        ]
+      },
+      {
+        "month": "2018-02-26",
+        "ret": -0.29,
+        "nav": 10392.0,
+        "spy_nav": 10363.0,
+        "regime": "risk_off_falling",
+        "holdings": [
+          "XLP",
+          "DBMF"
+        ]
+      },
+      {
+        "month": "2018-03-12",
+        "ret": 0.24,
+        "nav": 10417.0,
+        "spy_nav": 9903.0,
+        "regime": "risk_off_falling",
+        "holdings": [
+          "GLD",
+          "XLP",
+          "UGL",
+          "UUP",
+          "BTAL"
+        ]
+      },
+      {
+        "month": "2018-03-26",
+        "ret": 0.58,
+        "nav": 10478.0,
+        "spy_nav": 9750.0,
+        "regime": "risk_off_falling",
+        "holdings": [
+          "GLD",
+          "NUGT",
+          "BTAL",
+          "DBMF"
+        ]
+      },
+      {
+        "month": "2018-04-09",
+        "ret": 1.27,
+        "nav": 10611.0,
+        "spy_nav": 9958.0,
+        "regime": "risk_off_falling",
+        "holdings": [
+          "TMF",
+          "SLV",
+          "KMLM",
+          "UGL"
+        ]
+      },
+      {
+        "month": "2018-04-23",
+        "ret": -2.1,
+        "nav": 10388.0,
+        "spy_nav": 9971.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "QID",
+          "TBF",
+          "PSQ"
+        ]
+      },
+      {
+        "month": "2018-05-07",
+        "ret": -0.71,
+        "nav": 10314.0,
+        "spy_nav": 10212.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "PSQ",
+          "TBF"
+        ]
+      },
+      {
+        "month": "2018-05-21",
+        "ret": 0.28,
+        "nav": 10343.0,
+        "spy_nav": 10269.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "PSQ",
+          "SQQQ"
+        ]
+      },
+      {
+        "month": "2018-06-04",
+        "ret": 0.6,
+        "nav": 10405.0,
+        "spy_nav": 10377.0,
+        "regime": "risk_off_falling",
+        "holdings": [
+          "GLD",
+          "TAIL",
+          "KMLM",
+          "BTAL",
+          "DBMF"
+        ]
+      },
+      {
+        "month": "2018-06-18",
+        "ret": 0.0,
+        "nav": 10405.0,
+        "spy_nav": 10201.0,
+        "regime": "risk_off_falling",
+        "holdings": [
+          "TAIL",
+          "KMLM",
+          "TMF",
+          "UGL",
+          "GLD"
+        ]
+      },
+      {
+        "month": "2018-07-02",
+        "ret": 5.86,
+        "nav": 11014.0,
+        "spy_nav": 10482.0,
+        "regime": "risk_off_falling",
+        "holdings": [
+          "GLD",
+          "SLV",
+          "KMLM",
+          "UGL",
+          "XLP"
+        ]
+      },
+      {
+        "month": "2018-07-16",
+        "ret": 10.38,
+        "nav": 12157.0,
+        "spy_nav": 10505.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "GBTC",
+          "MIDU"
+        ]
+      },
+      {
+        "month": "2018-07-30",
+        "ret": 0.09,
+        "nav": 12168.0,
+        "spy_nav": 10585.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "BIL"
+        ]
+      },
+      {
+        "month": "2018-08-13",
+        "ret": 4.16,
+        "nav": 12674.0,
+        "spy_nav": 10873.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "SQQQ",
+          "TBT",
+          "BIL"
+        ]
+      },
+      {
+        "month": "2018-08-27",
+        "ret": 0.0,
+        "nav": 12674.0,
+        "spy_nav": 10810.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "GDXU"
+        ]
+      },
+      {
+        "month": "2018-09-10",
+        "ret": -0.84,
+        "nav": 12567.0,
+        "spy_nav": 10969.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "QID",
+          "TBT",
+          "PSQ",
+          "SQQQ"
+        ]
+      },
+      {
+        "month": "2018-09-24",
+        "ret": -7.36,
+        "nav": 11642.0,
+        "spy_nav": 10849.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "FAS",
+          "GBTC"
+        ]
+      },
+      {
+        "month": "2018-10-08",
+        "ret": -0.53,
+        "nav": 11581.0,
+        "spy_nav": 10366.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "TBT",
+          "BIL",
+          "SQQQ",
+          "QID"
+        ]
+      },
+      {
+        "month": "2018-10-22",
+        "ret": 1.37,
+        "nav": 11740.0,
+        "spy_nav": 10305.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "TBF",
+          "BIL",
+          "TBT"
+        ]
+      },
+      {
+        "month": "2018-11-05",
+        "ret": -0.03,
+        "nav": 11737.0,
+        "spy_nav": 10143.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "SQQQ",
+          "BIL"
+        ]
+      },
+      {
+        "month": "2018-11-19",
+        "ret": 0.0,
+        "nav": 11737.0,
+        "spy_nav": 10528.0,
+        "regime": "risk_off_falling",
+        "holdings": [
+          "XLP",
+          "TMF",
+          "SLV",
+          "DBMF",
+          "TAIL"
+        ]
+      },
+      {
+        "month": "2018-12-03",
+        "ret": 3.66,
+        "nav": 12166.0,
+        "spy_nav": 9625.0,
+        "regime": "risk_off_falling",
+        "holdings": [
+          "UUP",
+          "TAIL",
+          "GLD",
+          "NUGT",
+          "TMF"
+        ]
+      },
+      {
+        "month": "2018-12-17",
+        "ret": -10.36,
+        "nav": 10906.0,
+        "spy_nav": 9475.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "SPXL",
+          "FAS"
+        ]
+      },
+      {
+        "month": "2018-12-31",
+        "ret": 2.49,
+        "nav": 11177.0,
+        "spy_nav": 9759.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "XLK",
+          "UPRO"
+        ]
+      },
+      {
+        "month": "2019-01-14",
+        "ret": 0.0,
+        "nav": 11177.0,
+        "spy_nav": 10000.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "ERX",
+          "IBIT"
+        ]
+      },
+      {
+        "month": "2019-01-28",
+        "ret": 0.03,
+        "nav": 11181.0,
+        "spy_nav": 10260.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "CONL"
+        ]
+      },
+      {
+        "month": "2019-02-11",
+        "ret": 6.29,
+        "nav": 11885.0,
+        "spy_nav": 10598.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "FPX"
+        ]
+      },
+      {
+        "month": "2019-02-25",
+        "ret": 2.56,
+        "nav": 12188.0,
+        "spy_nav": 10557.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "XLK",
+          "IBIT"
+        ]
+      },
+      {
+        "month": "2019-03-11",
+        "ret": 7.46,
+        "nav": 13098.0,
+        "spy_nav": 10626.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "TECL"
+        ]
+      },
+      {
+        "month": "2019-03-25",
+        "ret": 18.5,
+        "nav": 15521.0,
+        "spy_nav": 10997.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "GBTC"
+        ]
+      },
+      {
+        "month": "2019-04-08",
+        "ret": 0.0,
+        "nav": 15521.0,
+        "spy_nav": 11054.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "DRN"
+        ]
+      },
+      {
+        "month": "2019-04-22",
+        "ret": 0.33,
+        "nav": 15572.0,
+        "spy_nav": 11151.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "UPRO"
+        ]
+      },
+      {
+        "month": "2019-05-06",
+        "ret": -17.43,
+        "nav": 12857.0,
+        "spy_nav": 10813.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "SILJ",
+          "UTSL"
+        ]
+      },
+      {
+        "month": "2019-05-20",
+        "ret": 3.42,
+        "nav": 13297.0,
+        "spy_nav": 10456.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "MTUM"
+        ]
+      },
+      {
+        "month": "2019-06-03",
+        "ret": 0.0,
+        "nav": 13297.0,
+        "spy_nav": 11019.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "CONL",
+          "CURE"
+        ]
+      },
+      {
+        "month": "2019-06-17",
+        "ret": 12.51,
+        "nav": 14960.0,
+        "spy_nav": 11314.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "TECL",
+          "TNA"
+        ]
+      },
+      {
+        "month": "2019-07-01",
+        "ret": 3.94,
+        "nav": 15549.0,
+        "spy_nav": 11508.0,
+        "regime": "risk_on",
+        "holdings": [
+          "DRN",
+          "MTUM",
+          "CURE"
+        ]
+      },
+      {
+        "month": "2019-07-15",
+        "ret": -1.0,
+        "nav": 15393.0,
+        "spy_nav": 11536.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "SPXL",
+          "GBTC"
+        ]
+      },
+      {
+        "month": "2019-07-29",
+        "ret": -7.66,
+        "nav": 14214.0,
+        "spy_nav": 11023.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "UPRO"
+        ]
+      },
+      {
+        "month": "2019-08-12",
+        "ret": 0.64,
+        "nav": 14304.0,
+        "spy_nav": 11020.0,
+        "regime": "risk_on",
+        "holdings": [
+          "FPX",
+          "CURE"
+        ]
+      },
+      {
+        "month": "2019-08-26",
+        "ret": 0.0,
+        "nav": 14304.0,
+        "spy_nav": 11411.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "VGT",
+          "UTSL"
+        ]
+      },
+      {
+        "month": "2019-09-09",
+        "ret": -0.48,
+        "nav": 14235.0,
+        "spy_nav": 11464.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "TECL",
+          "GBTC"
+        ]
+      },
+      {
+        "month": "2019-09-23",
+        "ret": -2.59,
+        "nav": 13867.0,
+        "spy_nav": 11267.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "SILJ",
+          "SIL"
+        ]
+      },
+      {
+        "month": "2019-10-07",
+        "ret": 6.92,
+        "nav": 14826.0,
+        "spy_nav": 11532.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "DRN"
+        ]
+      },
+      {
+        "month": "2019-10-21",
+        "ret": 9.2,
+        "nav": 16191.0,
+        "spy_nav": 11816.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "GBTC",
+          "UTSL"
+        ]
+      },
+      {
+        "month": "2019-11-04",
+        "ret": -0.17,
+        "nav": 16163.0,
+        "spy_nav": 11995.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "GDXU"
+        ]
+      },
+      {
+        "month": "2019-11-18",
+        "ret": -3.93,
+        "nav": 15528.0,
+        "spy_nav": 11980.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "DRN",
+          "TQQQ"
+        ]
+      },
+      {
+        "month": "2019-12-02",
+        "ret": 7.34,
+        "nav": 16668.0,
+        "spy_nav": 12282.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "MSTR",
+          "GBTC"
+        ]
+      },
+      {
+        "month": "2019-12-16",
+        "ret": 0.0,
+        "nav": 16668.0,
+        "spy_nav": 12404.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "FNGU"
+        ]
+      },
+      {
+        "month": "2019-12-30",
+        "ret": 4.53,
+        "nav": 17423.0,
+        "spy_nav": 12669.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "FPX"
+        ]
+      },
+      {
+        "month": "2020-01-13",
+        "ret": -2.72,
+        "nav": 16949.0,
+        "spy_nav": 12497.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "JNUG"
+        ]
+      },
+      {
+        "month": "2020-01-27",
+        "ret": -1.6,
+        "nav": 16678.0,
+        "spy_nav": 12929.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "SIL"
+        ]
+      },
+      {
+        "month": "2020-02-10",
+        "ret": -14.01,
+        "nav": 14341.0,
+        "spy_nav": 12455.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "TECL",
+          "TQQQ"
+        ]
+      },
+      {
+        "month": "2020-02-24",
+        "ret": -7.49,
+        "nav": 13267.0,
+        "spy_nav": 10594.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "CURE",
+          "CONL"
+        ]
+      },
+      {
+        "month": "2020-03-09",
+        "ret": 0.0,
+        "nav": 13267.0,
+        "spy_nav": 8663.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "FNGU",
+          "URTY"
+        ]
+      },
+      {
+        "month": "2020-03-23",
+        "ret": 4.05,
+        "nav": 13803.0,
+        "spy_nav": 10292.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "SILJ",
+          "URTY"
+        ]
+      },
+      {
+        "month": "2020-04-06",
+        "ret": 15.77,
+        "nav": 15980.0,
+        "spy_nav": 10942.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "TNA",
+          "FAS"
+        ]
+      },
+      {
+        "month": "2020-04-20",
+        "ret": -6.82,
+        "nav": 14891.0,
+        "spy_nav": 11019.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "FAS"
+        ]
+      },
+      {
+        "month": "2020-05-04",
+        "ret": 17.2,
+        "nav": 17452.0,
+        "spy_nav": 11463.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "XLK"
+        ]
+      },
+      {
+        "month": "2020-05-18",
+        "ret": 5.44,
+        "nav": 18401.0,
+        "spy_nav": 11873.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "JNUG"
+        ]
+      },
+      {
+        "month": "2020-06-01",
+        "ret": -1.9,
+        "nav": 18052.0,
+        "spy_nav": 11931.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "JNUG",
+          "GBTC"
+        ]
+      },
+      {
+        "month": "2020-06-15",
+        "ret": 4.85,
+        "nav": 18927.0,
+        "spy_nav": 11883.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "LABU"
+        ]
+      },
+      {
+        "month": "2020-06-29",
+        "ret": 16.32,
+        "nav": 22016.0,
+        "spy_nav": 12288.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "TQQQ",
+          "URTY"
+        ]
+      },
+      {
+        "month": "2020-07-13",
+        "ret": 20.79,
+        "nav": 26593.0,
+        "spy_nav": 12615.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "MSTR"
+        ]
+      },
+      {
+        "month": "2020-07-27",
+        "ret": 0.0,
+        "nav": 26593.0,
+        "spy_nav": 13097.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "MSTR",
+          "MIDU"
+        ]
+      },
+      {
+        "month": "2020-08-10",
+        "ret": 2.26,
+        "nav": 27193.0,
+        "spy_nav": 13384.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "URTY"
+        ]
+      },
+      {
+        "month": "2020-08-24",
+        "ret": -1.2,
+        "nav": 26865.0,
+        "spy_nav": 13005.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "TQQQ",
+          "VGT"
+        ]
+      },
+      {
+        "month": "2020-09-07",
+        "ret": -4.66,
+        "nav": 25613.0,
+        "spy_nav": 12813.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "CURE"
+        ]
+      },
+      {
+        "month": "2020-09-21",
+        "ret": 16.97,
+        "nav": 29959.0,
+        "spy_nav": 13314.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "TECL"
+        ]
+      },
+      {
+        "month": "2020-10-05",
+        "ret": 4.12,
+        "nav": 31194.0,
+        "spy_nav": 13402.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "FPX",
+          "TECL"
+        ]
+      },
+      {
+        "month": "2020-10-19",
+        "ret": 19.93,
+        "nav": 37411.0,
+        "spy_nav": 12939.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "FPX"
+        ]
+      },
+      {
+        "month": "2020-11-02",
+        "ret": 8.82,
+        "nav": 40711.0,
+        "spy_nav": 14208.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "JNUG"
+        ]
+      },
+      {
+        "month": "2020-11-16",
+        "ret": 47.0,
+        "nav": 59847.0,
+        "spy_nav": 14188.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "MSTR",
+          "GBTC"
+        ]
+      },
+      {
+        "month": "2020-11-30",
+        "ret": 0.0,
+        "nav": 59847.0,
+        "spy_nav": 14289.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "JNUG",
+          "MSTR"
+        ]
+      },
+      {
+        "month": "2020-12-14",
+        "ret": -1.33,
+        "nav": 59048.0,
+        "spy_nav": 14646.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "SQQQ",
+          "TBF",
+          "PSQ"
+        ]
+      },
+      {
+        "month": "2020-12-28",
+        "ret": 2.09,
+        "nav": 60283.0,
+        "spy_nav": 14902.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "PSQ",
+          "QID",
+          "BIL"
+        ]
+      },
+      {
+        "month": "2021-01-11",
+        "ret": -0.15,
+        "nav": 60192.0,
+        "spy_nav": 15127.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "BIL",
+          "QID"
+        ]
+      },
+      {
+        "month": "2021-01-25",
+        "ret": -1.19,
+        "nav": 59478.0,
+        "spy_nav": 15368.0,
+        "regime": "risk_off_falling",
+        "holdings": [
+          "NUGT",
+          "BTAL"
+        ]
+      },
+      {
+        "month": "2021-02-08",
+        "ret": 4.05,
+        "nav": 61885.0,
+        "spy_nav": 15231.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "TBT",
+          "BIL"
+        ]
+      },
+      {
+        "month": "2021-02-22",
+        "ret": 5.23,
+        "nav": 65125.0,
+        "spy_nav": 15022.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "BIL",
+          "PSQ",
+          "QID",
+          "TBF"
+        ]
+      },
+      {
+        "month": "2021-03-08",
+        "ret": -2.04,
+        "nav": 63797.0,
+        "spy_nav": 15500.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "QID",
+          "SQQQ",
+          "PSQ"
+        ]
+      },
+      {
+        "month": "2021-03-22",
+        "ret": -1.15,
+        "nav": 63065.0,
+        "spy_nav": 16044.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "BIL",
+          "TBF",
+          "SQQQ"
+        ]
+      },
+      {
+        "month": "2021-04-05",
+        "ret": 4.42,
+        "nav": 65851.0,
+        "spy_nav": 16393.0,
+        "regime": "risk_off_falling",
+        "holdings": [
+          "KMLM",
+          "GLD",
+          "BTAL",
+          "UGL",
+          "NUGT"
+        ]
+      },
+      {
+        "month": "2021-04-19",
+        "ret": -1.74,
+        "nav": 64704.0,
+        "spy_nav": 16511.0,
+        "regime": "risk_off_falling",
+        "holdings": [
+          "TMF",
+          "DBMF",
+          "NUGT"
+        ]
+      },
+      {
+        "month": "2021-05-03",
+        "ret": 0.5,
+        "nav": 65025.0,
+        "spy_nav": 16405.0,
+        "regime": "risk_off_falling",
+        "holdings": [
+          "UGL",
+          "SLV"
+        ]
+      },
+      {
+        "month": "2021-05-17",
+        "ret": -3.88,
+        "nav": 62504.0,
+        "spy_nav": 16569.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "TBT",
+          "PSQ"
+        ]
+      },
+      {
+        "month": "2021-05-31",
+        "ret": -1.87,
+        "nav": 61333.0,
+        "spy_nav": 16790.0,
+        "regime": "risk_off_falling",
+        "holdings": [
+          "UGL",
+          "TAIL",
+          "GLD",
+          "NUGT"
+        ]
+      },
+      {
+        "month": "2021-06-14",
+        "ret": 0.15,
+        "nav": 61427.0,
+        "spy_nav": 16932.0,
+        "regime": "risk_off_falling",
+        "holdings": [
+          "TMF",
+          "TAIL",
+          "BTAL",
+          "DBMF",
+          "XLP"
+        ]
+      },
+      {
+        "month": "2021-06-28",
+        "ret": 1.39,
+        "nav": 62281.0,
+        "spy_nav": 17313.0,
+        "regime": "risk_off_falling",
+        "holdings": [
+          "KMLM",
+          "UUP",
+          "NUGT"
+        ]
+      },
+      {
+        "month": "2021-07-12",
+        "ret": 1.14,
+        "nav": 62993.0,
+        "spy_nav": 17469.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "XLK",
+          "FPX"
+        ]
+      },
+      {
+        "month": "2021-07-26",
+        "ret": 4.69,
+        "nav": 65949.0,
+        "spy_nav": 17513.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "MIDU",
+          "UPRO"
+        ]
+      },
+      {
+        "month": "2021-08-09",
+        "ret": -7.5,
+        "nav": 61002.0,
+        "spy_nav": 17716.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "SPXL",
+          "BITX"
+        ]
+      },
+      {
+        "month": "2021-08-23",
+        "ret": 5.13,
+        "nav": 64134.0,
+        "spy_nav": 17883.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "UTSL"
+        ]
+      },
+      {
+        "month": "2021-09-06",
+        "ret": -9.13,
+        "nav": 58276.0,
+        "spy_nav": 17248.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "MIDU"
+        ]
+      },
+      {
+        "month": "2021-09-20",
+        "ret": -4.71,
+        "nav": 55529.0,
+        "spy_nav": 17033.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "XLK",
+          "GBTC"
+        ]
+      },
+      {
+        "month": "2021-10-04",
+        "ret": 11.49,
+        "nav": 61912.0,
+        "spy_nav": 17770.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "PSQ"
+        ]
+      },
+      {
+        "month": "2021-10-18",
+        "ret": 4.94,
+        "nav": 64971.0,
+        "spy_nav": 18281.0,
+        "regime": "risk_off_falling",
+        "holdings": [
+          "UUP",
+          "KMLM",
+          "TAIL",
+          "XLP"
+        ]
+      },
+      {
+        "month": "2021-11-01",
+        "ret": 5.9,
+        "nav": 68806.0,
+        "spy_nav": 18575.0,
+        "regime": "risk_off_falling",
+        "holdings": [
+          "TMF",
+          "NUGT",
+          "UGL",
+          "GLD",
+          "DBMF"
+        ]
+      },
+      {
+        "month": "2021-11-15",
+        "ret": -1.25,
+        "nav": 67943.0,
+        "spy_nav": 18462.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "TBT"
+        ]
+      },
+      {
+        "month": "2021-11-29",
+        "ret": 2.05,
+        "nav": 69334.0,
+        "spy_nav": 18540.0,
+        "regime": "risk_off_falling",
+        "holdings": [
+          "TMF",
+          "SLV"
+        ]
+      },
+      {
+        "month": "2021-12-13",
+        "ret": 2.07,
+        "nav": 70768.0,
+        "spy_nav": 19032.0,
+        "regime": "risk_off_falling",
+        "holdings": [
+          "UGL",
+          "TMF",
+          "SLV",
+          "GLD"
+        ]
+      },
+      {
+        "month": "2021-12-27",
+        "ret": -0.04,
+        "nav": 70737.0,
+        "spy_nav": 18563.0,
+        "regime": "risk_off_falling",
+        "holdings": [
+          "SLV",
+          "NUGT"
+        ]
+      },
+      {
+        "month": "2022-01-10",
+        "ret": -0.16,
+        "nav": 70621.0,
+        "spy_nav": 17540.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "PSQ",
+          "TBF"
+        ]
+      },
+      {
+        "month": "2022-01-24",
+        "ret": -0.3,
+        "nav": 70410.0,
+        "spy_nav": 17835.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "SQQQ",
+          "TBF"
+        ]
+      },
+      {
+        "month": "2022-02-07",
+        "ret": 2.99,
+        "nav": 72519.0,
+        "spy_nav": 17130.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "PSQ"
+        ]
+      },
+      {
+        "month": "2022-02-21",
+        "ret": -0.63,
+        "nav": 72063.0,
+        "spy_nav": 16726.0,
+        "regime": "risk_off_falling",
+        "holdings": [
+          "XLP",
+          "TAIL"
+        ]
+      },
+      {
+        "month": "2022-03-07",
+        "ret": -1.63,
+        "nav": 70886.0,
+        "spy_nav": 17776.0,
+        "regime": "risk_off_falling",
+        "holdings": [
+          "TMF",
+          "UGL",
+          "SLV",
+          "UUP"
+        ]
+      },
+      {
+        "month": "2022-03-21",
+        "ret": -0.11,
+        "nav": 70807.0,
+        "spy_nav": 18272.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "TBF",
+          "BIL",
+          "SQQQ"
+        ]
+      },
+      {
+        "month": "2022-04-04",
+        "ret": 4.35,
+        "nav": 73885.0,
+        "spy_nav": 17519.0,
+        "regime": "risk_off_falling",
+        "holdings": [
+          "UUP",
+          "KMLM"
+        ]
+      },
+      {
+        "month": "2022-04-18",
+        "ret": 5.75,
+        "nav": 78133.0,
+        "spy_nav": 16580.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "TBF",
+          "QID",
+          "PSQ"
+        ]
+      },
+      {
+        "month": "2022-05-02",
+        "ret": 9.28,
+        "nav": 85382.0,
+        "spy_nav": 16004.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "QID",
+          "PSQ",
+          "SQQQ",
+          "TBF"
+        ]
+      },
+      {
+        "month": "2022-05-16",
+        "ret": 3.92,
+        "nav": 88731.0,
+        "spy_nav": 16518.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "TBF",
+          "BIL"
+        ]
+      },
+      {
+        "month": "2022-05-30",
+        "ret": 10.12,
+        "nav": 97714.0,
+        "spy_nav": 15000.0,
+        "regime": "risk_off_falling",
+        "holdings": [
+          "GLD",
+          "SLV",
+          "DBMF",
+          "UGL"
+        ]
+      },
+      {
+        "month": "2022-06-13",
+        "ret": -2.08,
+        "nav": 95683.0,
+        "spy_nav": 15611.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "TBF",
+          "SQQQ",
+          "TBT",
+          "BIL"
+        ]
+      },
+      {
+        "month": "2022-06-27",
+        "ret": 1.15,
+        "nav": 96783.0,
+        "spy_nav": 15436.0,
+        "regime": "risk_off_falling",
+        "holdings": [
+          "TAIL",
+          "XLP",
+          "DBMF"
+        ]
+      },
+      {
+        "month": "2022-07-11",
+        "ret": -5.04,
+        "nav": 91909.0,
+        "spy_nav": 15892.0,
+        "regime": "risk_off_falling",
+        "holdings": [
+          "TAIL",
+          "NUGT"
+        ]
+      },
+      {
+        "month": "2022-07-25",
+        "ret": -3.7,
+        "nav": 88512.0,
+        "spy_nav": 16591.0,
+        "regime": "risk_off_falling",
+        "holdings": [
+          "BTAL",
+          "DBMF"
+        ]
+      },
+      {
+        "month": "2022-08-08",
+        "ret": 2.19,
+        "nav": 90447.0,
+        "spy_nav": 16606.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "TBF",
+          "SQQQ"
+        ]
+      },
+      {
+        "month": "2022-08-22",
+        "ret": 7.37,
+        "nav": 97110.0,
+        "spy_nav": 15698.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "QID",
+          "TBT",
+          "SQQQ"
+        ]
+      },
+      {
+        "month": "2022-09-05",
+        "ret": -0.08,
+        "nav": 97037.0,
+        "spy_nav": 15674.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "QID",
+          "TBF",
+          "BIL",
+          "TBT"
+        ]
+      },
+      {
+        "month": "2022-09-19",
+        "ret": 6.56,
+        "nav": 103407.0,
+        "spy_nav": 14789.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "TBT",
+          "QID",
+          "SQQQ",
+          "BIL"
+        ]
+      },
+      {
+        "month": "2022-10-03",
+        "ret": 5.65,
+        "nav": 109250.0,
+        "spy_nav": 14797.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "TBF",
+          "QID",
+          "SQQQ"
+        ]
+      },
+      {
+        "month": "2022-10-17",
+        "ret": -8.18,
+        "nav": 100313.0,
+        "spy_nav": 15579.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "BIL",
+          "QID"
+        ]
+      },
+      {
+        "month": "2022-10-31",
+        "ret": -2.16,
+        "nav": 98148.0,
+        "spy_nav": 15939.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "QID",
+          "TBF"
+        ]
+      },
+      {
+        "month": "2022-11-14",
+        "ret": -4.01,
+        "nav": 94209.0,
+        "spy_nav": 15971.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "TBT",
+          "PSQ",
+          "SQQQ"
+        ]
+      },
+      {
+        "month": "2022-11-28",
+        "ret": 4.83,
+        "nav": 98755.0,
+        "spy_nav": 16093.0,
+        "regime": "risk_off_falling",
+        "holdings": [
+          "TAIL",
+          "SLV"
+        ]
+      },
+      {
+        "month": "2022-12-12",
+        "ret": 0.85,
+        "nav": 99598.0,
+        "spy_nav": 15456.0,
+        "regime": "risk_off_falling",
+        "holdings": [
+          "XLP",
+          "KMLM",
+          "BTAL",
+          "NUGT",
+          "GLD"
+        ]
+      },
+      {
+        "month": "2022-12-26",
+        "ret": -10.08,
+        "nav": 89554.0,
+        "spy_nav": 15718.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "TBT"
+        ]
+      },
+      {
+        "month": "2023-01-09",
+        "ret": 1.59,
+        "nav": 90976.0,
+        "spy_nav": 16235.0,
+        "regime": "risk_off_falling",
+        "holdings": [
+          "KMLM",
+          "DBMF",
+          "GLD"
+        ]
+      },
+      {
+        "month": "2023-01-23",
+        "ret": 8.19,
+        "nav": 98428.0,
+        "spy_nav": 16608.0,
+        "regime": "risk_off_falling",
+        "holdings": [
+          "GLD",
+          "SLV"
+        ]
+      },
+      {
+        "month": "2023-02-06",
+        "ret": -4.32,
+        "nav": 94177.0,
+        "spy_nav": 16173.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "MSTR",
+          "TQQQ"
+        ]
+      },
+      {
+        "month": "2023-02-20",
+        "ret": -1.56,
+        "nav": 92704.0,
+        "spy_nav": 16391.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "UPRO",
+          "MSTR"
+        ]
+      },
+      {
+        "month": "2023-03-06",
+        "ret": -2.74,
+        "nav": 90163.0,
+        "spy_nav": 16017.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "PSQ",
+          "TBT"
+        ]
+      },
+      {
+        "month": "2023-03-20",
+        "ret": 0.0,
+        "nav": 90163.0,
+        "spy_nav": 16717.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "UTSL",
+          "IBIT"
+        ]
+      },
+      {
+        "month": "2023-04-03",
+        "ret": -0.69,
+        "nav": 89539.0,
+        "spy_nav": 16839.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "FNGU"
+        ]
+      },
+      {
+        "month": "2023-04-17",
+        "ret": -5.21,
+        "nav": 84877.0,
+        "spy_nav": 16902.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "TBF",
+          "TBT",
+          "BIL"
+        ]
+      },
+      {
+        "month": "2023-05-01",
+        "ret": 7.1,
+        "nav": 90901.0,
+        "spy_nav": 16801.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "BITX",
+          "TECL"
+        ]
+      },
+      {
+        "month": "2023-05-15",
+        "ret": -2.83,
+        "nav": 88332.0,
+        "spy_nav": 17092.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "PSQ",
+          "TBT"
+        ]
+      },
+      {
+        "month": "2023-05-29",
+        "ret": 0.55,
+        "nav": 88815.0,
+        "spy_nav": 17646.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "QID",
+          "PSQ"
+        ]
+      },
+      {
+        "month": "2023-06-12",
+        "ret": -0.61,
+        "nav": 88275.0,
+        "spy_nav": 17616.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "TBT",
+          "SQQQ",
+          "TBF"
+        ]
+      },
+      {
+        "month": "2023-06-26",
+        "ret": -0.16,
+        "nav": 88135.0,
+        "spy_nav": 17951.0,
+        "regime": "risk_off_falling",
+        "holdings": [
+          "DBMF",
+          "KMLM",
+          "SLV",
+          "GLD",
+          "NUGT"
+        ]
+      },
+      {
+        "month": "2023-07-10",
+        "ret": -2.47,
+        "nav": 85954.0,
+        "spy_nav": 18545.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "QID",
+          "BIL",
+          "TBF"
+        ]
+      },
+      {
+        "month": "2023-07-24",
+        "ret": 0.13,
+        "nav": 86066.0,
+        "spy_nav": 18402.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "GDXU",
+          "GBTC"
+        ]
+      },
+      {
+        "month": "2023-08-07",
+        "ret": 3.29,
+        "nav": 88901.0,
+        "spy_nav": 17938.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "BIL",
+          "TBT",
+          "TBF"
+        ]
+      },
+      {
+        "month": "2023-08-21",
+        "ret": -3.17,
+        "nav": 86085.0,
+        "spy_nav": 18342.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "TBF",
+          "PSQ"
+        ]
+      },
+      {
+        "month": "2023-09-04",
+        "ret": 0.99,
+        "nav": 86939.0,
+        "spy_nav": 18177.0,
+        "regime": "risk_off_falling",
+        "holdings": [
+          "SLV",
+          "NUGT",
+          "GLD",
+          "BTAL"
+        ]
+      },
+      {
+        "month": "2023-09-18",
+        "ret": 2.06,
+        "nav": 88727.0,
+        "spy_nav": 17509.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "PSQ"
+        ]
+      },
+      {
+        "month": "2023-10-02",
+        "ret": 1.15,
+        "nav": 89752.0,
+        "spy_nav": 17866.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "TBF",
+          "TBT",
+          "QID"
+        ]
+      },
+      {
+        "month": "2023-10-16",
+        "ret": 1.39,
+        "nav": 90999.0,
+        "spy_nav": 17028.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "TBT",
+          "TBF"
+        ]
+      },
+      {
+        "month": "2023-10-30",
+        "ret": -6.74,
+        "nav": 84868.0,
+        "spy_nav": 18036.0,
+        "regime": "risk_off_falling",
+        "holdings": [
+          "KMLM",
+          "NUGT"
+        ]
+      },
+      {
+        "month": "2023-11-13",
+        "ret": -0.79,
+        "nav": 84199.0,
+        "spy_nav": 18622.0,
+        "regime": "risk_off_falling",
+        "holdings": [
+          "XLP",
+          "BTAL",
+          "KMLM",
+          "UUP",
+          "GLD"
+        ]
+      },
+      {
+        "month": "2023-11-27",
+        "ret": 8.39,
+        "nav": 91261.0,
+        "spy_nav": 18930.0,
+        "regime": "risk_off_falling",
+        "holdings": [
+          "GLD",
+          "UUP",
+          "TMF"
+        ]
+      },
+      {
+        "month": "2023-12-11",
+        "ret": 1.18,
+        "nav": 92337.0,
+        "spy_nav": 19568.0,
+        "regime": "risk_off_falling",
+        "holdings": [
+          "GLD",
+          "TMF",
+          "UUP",
+          "TAIL"
+        ]
+      },
+      {
+        "month": "2023-12-25",
+        "ret": -5.55,
+        "nav": 87211.0,
+        "spy_nav": 19525.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "TNA",
+          "MSTR"
+        ]
+      },
+      {
+        "month": "2024-01-08",
+        "ret": -3.48,
+        "nav": 84177.0,
+        "spy_nav": 19889.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "FAS",
+          "LABU"
+        ]
+      },
+      {
+        "month": "2024-01-22",
+        "ret": -0.39,
+        "nav": 83851.0,
+        "spy_nav": 20264.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "SPXL"
+        ]
+      },
+      {
+        "month": "2024-02-05",
+        "ret": 5.02,
+        "nav": 88060.0,
+        "spy_nav": 20437.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "GDXU"
+        ]
+      },
+      {
+        "month": "2024-02-19",
+        "ret": 33.26,
+        "nav": 117351.0,
+        "spy_nav": 21076.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "GBTC"
+        ]
+      },
+      {
+        "month": "2024-03-04",
+        "ret": -0.88,
+        "nav": 116313.0,
+        "spy_nav": 21165.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "MTUM",
+          "VGT"
+        ]
+      },
+      {
+        "month": "2024-03-18",
+        "ret": 6.25,
+        "nav": 123579.0,
+        "spy_nav": 21548.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "UPRO",
+          "GBTC"
+        ]
+      },
+      {
+        "month": "2024-04-01",
+        "ret": 5.15,
+        "nav": 129942.0,
+        "spy_nav": 20818.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "BIL",
+          "TBT",
+          "QID"
+        ]
+      },
+      {
+        "month": "2024-04-15",
+        "ret": -0.61,
+        "nav": 129150.0,
+        "spy_nav": 21049.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "SQQQ",
+          "PSQ",
+          "TBT",
+          "BIL"
+        ]
+      },
+      {
+        "month": "2024-04-29",
+        "ret": -0.27,
+        "nav": 128804.0,
+        "spy_nav": 21497.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "TBF",
+          "BIL"
+        ]
+      },
+      {
+        "month": "2024-05-13",
+        "ret": 1.0,
+        "nav": 130087.0,
+        "spy_nav": 21864.0,
+        "regime": "risk_off_falling",
+        "holdings": [
+          "SLV",
+          "NUGT",
+          "GLD"
+        ]
+      },
+      {
+        "month": "2024-05-27",
+        "ret": 5.25,
+        "nav": 136921.0,
+        "spy_nav": 22106.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "BIL",
+          "QID"
+        ]
+      },
+      {
+        "month": "2024-06-10",
+        "ret": -8.21,
+        "nav": 125676.0,
+        "spy_nav": 22470.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "SQQQ",
+          "QID"
+        ]
+      },
+      {
+        "month": "2024-06-24",
+        "ret": -1.23,
+        "nav": 124131.0,
+        "spy_nav": 22989.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "URTY",
+          "ERX"
+        ]
+      },
+      {
+        "month": "2024-07-08",
+        "ret": -0.78,
+        "nav": 123166.0,
+        "spy_nav": 22963.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "TQQQ"
+        ]
+      },
+      {
+        "month": "2024-07-22",
+        "ret": -32.01,
+        "nav": 83743.0,
+        "spy_nav": 21420.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "CONL",
+          "ERX"
+        ]
+      },
+      {
+        "month": "2024-08-05",
+        "ret": 25.73,
+        "nav": 105290.0,
+        "spy_nav": 23168.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "VGT",
+          "CURE"
+        ]
+      },
+      {
+        "month": "2024-08-19",
+        "ret": -0.46,
+        "nav": 104807.0,
+        "spy_nav": 22857.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "TNA"
+        ]
+      },
+      {
+        "month": "2024-09-02",
+        "ret": 12.41,
+        "nav": 117809.0,
+        "spy_nav": 23302.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "SPXL",
+          "GBTC"
+        ]
+      },
+      {
+        "month": "2024-09-16",
+        "ret": 1.58,
+        "nav": 119672.0,
+        "spy_nav": 23827.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "VGT",
+          "MIDU"
+        ]
+      },
+      {
+        "month": "2024-09-30",
+        "ret": 4.86,
+        "nav": 125488.0,
+        "spy_nav": 24266.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "TQQQ"
+        ]
+      },
+      {
+        "month": "2024-10-14",
+        "ret": 0.0,
+        "nav": 125488.0,
+        "spy_nav": 24121.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "ERX",
+          "FPX"
+        ]
+      },
+      {
+        "month": "2024-10-28",
+        "ret": -7.22,
+        "nav": 116427.0,
+        "spy_nav": 24865.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "SIL"
+        ]
+      },
+      {
+        "month": "2024-11-11",
+        "ret": 20.9,
+        "nav": 140762.0,
+        "spy_nav": 24814.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "FPX",
+          "UTSL"
+        ]
+      },
+      {
+        "month": "2024-11-25",
+        "ret": 0.27,
+        "nav": 141149.0,
+        "spy_nav": 25111.0,
+        "regime": "risk_off_falling",
+        "holdings": [
+          "NUGT",
+          "KMLM",
+          "BTAL",
+          "TMF",
+          "TAIL"
+        ]
+      },
+      {
+        "month": "2024-12-09",
+        "ret": -0.28,
+        "nav": 140749.0,
+        "spy_nav": 24779.0,
+        "regime": "risk_off_falling",
+        "holdings": [
+          "UGL",
+          "NUGT"
+        ]
+      },
+      {
+        "month": "2024-12-23",
+        "ret": 0.62,
+        "nav": 141620.0,
+        "spy_nav": 24807.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "SQQQ",
+          "PSQ"
+        ]
+      },
+      {
+        "month": "2025-01-06",
+        "ret": 0.54,
+        "nav": 142382.0,
+        "spy_nav": 25128.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "IBIT",
+          "UTSL"
+        ]
+      },
+      {
+        "month": "2025-01-20",
+        "ret": 3.24,
+        "nav": 147001.0,
+        "spy_nav": 24908.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "UTSL",
+          "BITX"
+        ]
+      },
+      {
+        "month": "2025-02-03",
+        "ret": 0.19,
+        "nav": 147280.0,
+        "spy_nav": 25479.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "GDXU"
+        ]
+      },
+      {
+        "month": "2025-02-17",
+        "ret": 4.36,
+        "nav": 153707.0,
+        "spy_nav": 24324.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "TNA",
+          "XLK"
+        ]
+      },
+      {
+        "month": "2025-03-03",
+        "ret": 0.77,
+        "nav": 154885.0,
+        "spy_nav": 23632.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "FNGU"
+        ]
+      },
+      {
+        "month": "2025-03-17",
+        "ret": -1.86,
+        "nav": 152004.0,
+        "spy_nav": 23379.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "UTSL"
+        ]
+      },
+      {
+        "month": "2025-03-31",
+        "ret": -7.59,
+        "nav": 140469.0,
+        "spy_nav": 22531.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "ERX"
+        ]
+      },
+      {
+        "month": "2025-04-14",
+        "ret": -2.53,
+        "nav": 136915.0,
+        "spy_nav": 23022.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "FAS",
+          "MSTR"
+        ]
+      },
+      {
+        "month": "2025-04-28",
+        "ret": 0.14,
+        "nav": 137112.0,
+        "spy_nav": 24365.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "MTUM"
+        ]
+      },
+      {
+        "month": "2025-05-12",
+        "ret": 3.75,
+        "nav": 142248.0,
+        "spy_nav": 24706.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "FNGU"
+        ]
+      },
+      {
+        "month": "2025-05-26",
+        "ret": -0.96,
+        "nav": 140876.0,
+        "spy_nav": 25062.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "ERX"
+        ]
+      },
+      {
+        "month": "2025-06-09",
+        "ret": -1.69,
+        "nav": 138502.0,
+        "spy_nav": 25156.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "BITX"
+        ]
+      },
+      {
+        "month": "2025-06-23",
+        "ret": 15.23,
+        "nav": 159592.0,
+        "spy_nav": 26017.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "URTY"
+        ]
+      },
+      {
+        "month": "2025-07-07",
+        "ret": -0.05,
+        "nav": 159517.0,
+        "spy_nav": 26356.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "JNUG"
+        ]
+      },
+      {
+        "month": "2025-07-21",
+        "ret": 3.36,
+        "nav": 164869.0,
+        "spy_nav": 26457.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "VGT",
+          "CURE"
+        ]
+      },
+      {
+        "month": "2025-08-04",
+        "ret": 11.31,
+        "nav": 183520.0,
+        "spy_nav": 26965.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "SILJ",
+          "LABU"
+        ]
+      },
+      {
+        "month": "2025-08-18",
+        "ret": -6.6,
+        "nav": 171407.0,
+        "spy_nav": 26838.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "MTUM"
+        ]
+      },
+      {
+        "month": "2025-09-01",
+        "ret": 7.61,
+        "nav": 184443.0,
+        "spy_nav": 27703.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "FAS",
+          "UTSL"
+        ]
+      },
+      {
+        "month": "2025-09-15",
+        "ret": 3.11,
+        "nav": 190179.0,
+        "spy_nav": 27896.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "XLK",
+          "TNA"
+        ]
+      },
+      {
+        "month": "2025-09-29",
+        "ret": 7.42,
+        "nav": 204286.0,
+        "spy_nav": 27869.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "MSTR"
+        ]
+      },
+      {
+        "month": "2025-10-13",
+        "ret": 14.62,
+        "nav": 234158.0,
+        "spy_nav": 28803.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "URTY"
+        ]
+      },
+      {
+        "month": "2025-10-27",
+        "ret": -8.18,
+        "nav": 215001.0,
+        "spy_nav": 28643.0,
+        "regime": "risk_on",
+        "holdings": [
+          "FAS",
+          "LABU"
+        ]
+      },
+      {
+        "month": "2025-11-10",
+        "ret": -2.57,
+        "nav": 209475.0,
+        "spy_nav": 28109.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "UTSL"
+        ]
+      },
+      {
+        "month": "2025-11-24",
+        "ret": 11.29,
+        "nav": 233128.0,
+        "spy_nav": 28735.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "VGT",
+          "MTUM"
+        ]
+      },
+      {
+        "month": "2025-12-08",
+        "ret": 4.6,
+        "nav": 243863.0,
+        "spy_nav": 28870.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "IBIT"
+        ]
+      },
+      {
+        "month": "2025-12-22",
+        "ret": -2.37,
+        "nav": 238086.0,
+        "spy_nav": 28992.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "FPX"
+        ]
+      },
+      {
+        "month": "2026-01-05",
+        "ret": 1.76,
+        "nav": 242272.0,
+        "spy_nav": 28565.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "SPXL",
+          "SIL"
+        ]
+      },
+      {
+        "month": "2026-01-19",
+        "ret": -3.51,
+        "nav": 233760.0,
+        "spy_nav": 29316.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "GBTC"
+        ]
+      },
+      {
+        "month": "2026-02-02",
+        "ret": -2.31,
+        "nav": 228371.0,
+        "spy_nav": 28787.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "SILJ"
+        ]
+      },
+      {
+        "month": "2026-02-16",
+        "ret": 1.1,
+        "nav": 230873.0,
+        "spy_nav": 28936.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "LABU",
+          "MTUM"
+        ]
+      },
+      {
+        "month": "2026-03-02",
+        "ret": -9.04,
+        "nav": 210010.0,
+        "spy_nav": 28204.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "QQQM",
+          "SILJ"
+        ]
+      },
+      {
+        "month": "2026-03-16",
+        "ret": 11.38,
+        "nav": 233912.0,
+        "spy_nav": 26715.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "FAS",
+          "MSTR"
+        ]
+      },
+      {
+        "month": "2026-03-30",
+        "ret": -2.12,
+        "nav": 228957.0,
+        "spy_nav": 29003.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "IBIT",
+          "MTUM"
+        ]
+      },
+      {
+        "month": "2026-04-13",
+        "ret": 0.76,
+        "nav": 230689.0,
+        "spy_nav": 30232.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "TECL"
+        ]
+      },
+      {
+        "month": "2026-04-27",
+        "ret": -6.85,
+        "nav": 214897.0,
+        "spy_nav": 30232.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "UPRO"
+        ]
+      }
+    ],
+    "final_nav": 214897.0,
+    "max_dd": 38.8
+  },
+  "hof_seeded": {
+    "label": "HoF Seeded",
+    "periods": [
+      {
+        "month": "2018-01-01",
+        "ret": -0.03,
+        "nav": 9997.0,
+        "spy_nav": 10305.0,
+        "regime": "risk_off_falling",
+        "holdings": [
+          "TMF",
+          "XLP",
+          "KMLM"
+        ]
+      },
+      {
+        "month": "2018-01-15",
+        "ret": -0.11,
+        "nav": 9986.0,
+        "spy_nav": 10592.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "PSQ",
+          "BIL"
+        ]
+      },
+      {
+        "month": "2018-01-29",
+        "ret": 4.76,
+        "nav": 10462.0,
+        "spy_nav": 9872.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "TBT"
+        ]
+      },
+      {
+        "month": "2018-02-12",
+        "ret": 0.13,
+        "nav": 10476.0,
+        "spy_nav": 10340.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "SQQQ",
+          "PSQ",
+          "TBT"
+        ]
+      },
+      {
+        "month": "2018-02-26",
+        "ret": -0.43,
+        "nav": 10430.0,
+        "spy_nav": 10363.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "SQQQ",
+          "PSQ"
+        ]
+      },
+      {
+        "month": "2018-03-12",
+        "ret": -0.89,
+        "nav": 10337.0,
+        "spy_nav": 9903.0,
+        "regime": "risk_off_falling",
+        "holdings": [
+          "TMF",
+          "SLV",
+          "LQD"
+        ]
+      },
+      {
+        "month": "2018-03-26",
+        "ret": 0.19,
+        "nav": 10357.0,
+        "spy_nav": 9750.0,
+        "regime": "risk_off_falling",
+        "holdings": [
+          "TMF",
+          "UGL",
+          "NUGT",
+          "BTAL",
+          "SLV"
+        ]
+      },
+      {
+        "month": "2018-04-09",
+        "ret": 1.44,
+        "nav": 10506.0,
+        "spy_nav": 9958.0,
+        "regime": "risk_off_falling",
+        "holdings": [
+          "TMF",
+          "UGL",
+          "NUGT",
+          "BTAL",
+          "SLV"
+        ]
+      },
+      {
+        "month": "2018-04-23",
+        "ret": 0.08,
+        "nav": 10514.0,
+        "spy_nav": 9971.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "SQQQ",
+          "TBF",
+          "QID"
+        ]
+      },
+      {
+        "month": "2018-05-07",
+        "ret": -2.83,
+        "nav": 10216.0,
+        "spy_nav": 10212.0,
+        "regime": "risk_off_falling",
+        "holdings": [
+          "UGL",
+          "TAIL",
+          "TMF"
+        ]
+      },
+      {
+        "month": "2018-05-21",
+        "ret": -0.95,
+        "nav": 10119.0,
+        "spy_nav": 10269.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "SQQQ",
+          "QID",
+          "TBT"
+        ]
+      },
+      {
+        "month": "2018-06-04",
+        "ret": 0.35,
+        "nav": 10155.0,
+        "spy_nav": 10377.0,
+        "regime": "risk_off_falling",
+        "holdings": [
+          "BTAL",
+          "NUGT"
+        ]
+      },
+      {
+        "month": "2018-06-18",
+        "ret": 0.71,
+        "nav": 10228.0,
+        "spy_nav": 10201.0,
+        "regime": "risk_off_falling",
+        "holdings": [
+          "NUGT",
+          "BTAL",
+          "UUP",
+          "SLV"
+        ]
+      },
+      {
+        "month": "2018-07-02",
+        "ret": 5.19,
+        "nav": 10758.0,
+        "spy_nav": 10482.0,
+        "regime": "risk_off_falling",
+        "holdings": [
+          "UGL",
+          "DBMF"
+        ]
+      },
+      {
+        "month": "2018-07-16",
+        "ret": 4.35,
+        "nav": 11226.0,
+        "spy_nav": 10505.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "MIDU"
+        ]
+      },
+      {
+        "month": "2018-07-30",
+        "ret": -1.11,
+        "nav": 11101.0,
+        "spy_nav": 10585.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "BIL",
+          "SQQQ",
+          "TBT"
+        ]
+      },
+      {
+        "month": "2018-08-13",
+        "ret": 8.49,
+        "nav": 12044.0,
+        "spy_nav": 10873.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "ERX"
+        ]
+      },
+      {
+        "month": "2018-08-27",
+        "ret": 0.27,
+        "nav": 12076.0,
+        "spy_nav": 10810.0,
+        "regime": "risk_off_falling",
+        "holdings": [
+          "KMLM",
+          "SLV",
+          "XLP",
+          "UUP"
+        ]
+      },
+      {
+        "month": "2018-09-10",
+        "ret": 2.68,
+        "nav": 12400.0,
+        "spy_nav": 10969.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "SQQQ",
+          "TBF",
+          "BIL"
+        ]
+      },
+      {
+        "month": "2018-09-24",
+        "ret": 0.83,
+        "nav": 12503.0,
+        "spy_nav": 10849.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "URTY"
+        ]
+      },
+      {
+        "month": "2018-10-08",
+        "ret": 0.51,
+        "nav": 12567.0,
+        "spy_nav": 10366.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "SH",
+          "SPXS"
+        ]
+      },
+      {
+        "month": "2018-10-22",
+        "ret": 0.55,
+        "nav": 12636.0,
+        "spy_nav": 10305.0,
+        "regime": "risk_off_falling",
+        "holdings": [
+          "TMF",
+          "SLV",
+          "LQD"
+        ]
+      },
+      {
+        "month": "2018-11-05",
+        "ret": -0.04,
+        "nav": 12631.0,
+        "spy_nav": 10143.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "SH",
+          "SPXS"
+        ]
+      },
+      {
+        "month": "2018-11-19",
+        "ret": 0.0,
+        "nav": 12631.0,
+        "spy_nav": 10528.0,
+        "regime": "risk_off_falling",
+        "holdings": [
+          "TMF",
+          "KMLM"
+        ]
+      },
+      {
+        "month": "2018-12-03",
+        "ret": -13.16,
+        "nav": 10969.0,
+        "spy_nav": 9625.0,
+        "regime": "risk_off_falling",
+        "holdings": [
+          "TMF",
+          "KMLM",
+          "BTAL",
+          "XLP",
+          "UUP"
+        ]
+      },
+      {
+        "month": "2018-12-17",
+        "ret": 0.0,
+        "nav": 10969.0,
+        "spy_nav": 9475.0,
+        "regime": "risk_on",
+        "holdings": [
+          "QQQM",
+          "CURE"
+        ]
+      },
+      {
+        "month": "2018-12-31",
+        "ret": 17.44,
+        "nav": 12882.0,
+        "spy_nav": 9759.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "TNA"
+        ]
+      },
+      {
+        "month": "2019-01-14",
+        "ret": 1.36,
+        "nav": 13057.0,
+        "spy_nav": 10000.0,
+        "regime": "risk_on",
+        "holdings": [
+          "EFA",
+          "XLV",
+          "ERX"
+        ]
+      },
+      {
+        "month": "2019-01-28",
+        "ret": 6.63,
+        "nav": 13923.0,
+        "spy_nav": 10260.0,
+        "regime": "risk_on",
+        "holdings": [
+          "EFA",
+          "XLV",
+          "MIDU"
+        ]
+      },
+      {
+        "month": "2019-02-11",
+        "ret": -1.08,
+        "nav": 13773.0,
+        "spy_nav": 10598.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "MIDU",
+          "SILJ"
+        ]
+      },
+      {
+        "month": "2019-02-25",
+        "ret": -1.38,
+        "nav": 13583.0,
+        "spy_nav": 10557.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "MIDU",
+          "SILJ"
+        ]
+      },
+      {
+        "month": "2019-03-11",
+        "ret": 4.09,
+        "nav": 14138.0,
+        "spy_nav": 10626.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "TECL"
+        ]
+      },
+      {
+        "month": "2019-03-25",
+        "ret": 12.74,
+        "nav": 15939.0,
+        "spy_nav": 10997.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "MIDU",
+          "SILJ"
+        ]
+      },
+      {
+        "month": "2019-04-08",
+        "ret": 10.25,
+        "nav": 17572.0,
+        "spy_nav": 11054.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "TECL"
+        ]
+      },
+      {
+        "month": "2019-04-22",
+        "ret": 0.58,
+        "nav": 17674.0,
+        "spy_nav": 11151.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "MTUM",
+          "VGT"
+        ]
+      },
+      {
+        "month": "2019-05-06",
+        "ret": -10.14,
+        "nav": 15881.0,
+        "spy_nav": 10813.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "TECL"
+        ]
+      },
+      {
+        "month": "2019-05-20",
+        "ret": -9.78,
+        "nav": 14328.0,
+        "spy_nav": 10456.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "MIDU",
+          "SILJ"
+        ]
+      },
+      {
+        "month": "2019-06-03",
+        "ret": 10.15,
+        "nav": 15782.0,
+        "spy_nav": 11019.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "MIDU",
+          "SILJ"
+        ]
+      },
+      {
+        "month": "2019-06-17",
+        "ret": -0.6,
+        "nav": 15688.0,
+        "spy_nav": 11314.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "CURE",
+          "FPX"
+        ]
+      },
+      {
+        "month": "2019-07-01",
+        "ret": 27.57,
+        "nav": 20012.0,
+        "spy_nav": 11508.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "GBTC"
+        ]
+      },
+      {
+        "month": "2019-07-15",
+        "ret": 0.0,
+        "nav": 20012.0,
+        "spy_nav": 11536.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "VGT",
+          "GDXU"
+        ]
+      },
+      {
+        "month": "2019-07-29",
+        "ret": 0.0,
+        "nav": 20012.0,
+        "spy_nav": 11023.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "VGT",
+          "GDXU"
+        ]
+      },
+      {
+        "month": "2019-08-12",
+        "ret": 0.0,
+        "nav": 20012.0,
+        "spy_nav": 11020.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "CURE",
+          "GBTC"
+        ]
+      },
+      {
+        "month": "2019-08-26",
+        "ret": 0.0,
+        "nav": 20012.0,
+        "spy_nav": 11411.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "QQQM"
+        ]
+      },
+      {
+        "month": "2019-09-09",
+        "ret": 0.0,
+        "nav": 20012.0,
+        "spy_nav": 11464.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "QQQM"
+        ]
+      },
+      {
+        "month": "2019-09-23",
+        "ret": -5.9,
+        "nav": 18832.0,
+        "spy_nav": 11267.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "BITX",
+          "CURE"
+        ]
+      },
+      {
+        "month": "2019-10-07",
+        "ret": 1.04,
+        "nav": 19028.0,
+        "spy_nav": 11532.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "GBTC"
+        ]
+      },
+      {
+        "month": "2019-10-21",
+        "ret": 22.94,
+        "nav": 23393.0,
+        "spy_nav": 11816.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "GBTC"
+        ]
+      },
+      {
+        "month": "2019-11-04",
+        "ret": 2.14,
+        "nav": 23894.0,
+        "spy_nav": 11995.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "MIDU",
+          "SILJ"
+        ]
+      },
+      {
+        "month": "2019-11-18",
+        "ret": 0.0,
+        "nav": 23894.0,
+        "spy_nav": 11980.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "VGT"
+        ]
+      },
+      {
+        "month": "2019-12-02",
+        "ret": 0.43,
+        "nav": 23997.0,
+        "spy_nav": 12282.0,
+        "regime": "risk_off_falling",
+        "holdings": [
+          "SLV",
+          "TAIL",
+          "NUGT"
+        ]
+      },
+      {
+        "month": "2019-12-16",
+        "ret": -0.08,
+        "nav": 23977.0,
+        "spy_nav": 12404.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "UTSL",
+          "FNGU"
+        ]
+      },
+      {
+        "month": "2019-12-30",
+        "ret": 10.14,
+        "nav": 26410.0,
+        "spy_nav": 12669.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "UTSL"
+        ]
+      },
+      {
+        "month": "2020-01-13",
+        "ret": 6.92,
+        "nav": 28238.0,
+        "spy_nav": 12497.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "FAS"
+        ]
+      },
+      {
+        "month": "2020-01-27",
+        "ret": -3.72,
+        "nav": 27187.0,
+        "spy_nav": 12929.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "ERX",
+          "DRN"
+        ]
+      },
+      {
+        "month": "2020-02-10",
+        "ret": 0.0,
+        "nav": 27187.0,
+        "spy_nav": 12455.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "UTSL",
+          "FNGU"
+        ]
+      },
+      {
+        "month": "2020-02-24",
+        "ret": -15.98,
+        "nav": 22843.0,
+        "spy_nav": 10594.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "GBTC"
+        ]
+      },
+      {
+        "month": "2020-03-09",
+        "ret": 1.4,
+        "nav": 23163.0,
+        "spy_nav": 8663.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "TECL"
+        ]
+      },
+      {
+        "month": "2020-03-23",
+        "ret": -12.66,
+        "nav": 20230.0,
+        "spy_nav": 10292.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "TECL"
+        ]
+      },
+      {
+        "month": "2020-04-06",
+        "ret": 23.49,
+        "nav": 24982.0,
+        "spy_nav": 10942.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "SIL"
+        ]
+      },
+      {
+        "month": "2020-04-20",
+        "ret": -4.93,
+        "nav": 23751.0,
+        "spy_nav": 11019.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "TECL"
+        ]
+      },
+      {
+        "month": "2020-05-04",
+        "ret": 17.52,
+        "nav": 27912.0,
+        "spy_nav": 11463.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "TQQQ"
+        ]
+      },
+      {
+        "month": "2020-05-18",
+        "ret": 9.16,
+        "nav": 30469.0,
+        "spy_nav": 11873.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "JNUG",
+          "UPRO"
+        ]
+      },
+      {
+        "month": "2020-06-01",
+        "ret": -0.82,
+        "nav": 30220.0,
+        "spy_nav": 11931.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "SILJ",
+          "SIL"
+        ]
+      },
+      {
+        "month": "2020-06-15",
+        "ret": 2.5,
+        "nav": 30974.0,
+        "spy_nav": 11883.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "TQQQ",
+          "SILJ"
+        ]
+      },
+      {
+        "month": "2020-06-29",
+        "ret": 2.08,
+        "nav": 31619.0,
+        "spy_nav": 12288.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "LABU"
+        ]
+      },
+      {
+        "month": "2020-07-13",
+        "ret": 2.83,
+        "nav": 32512.0,
+        "spy_nav": 12615.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "TECL"
+        ]
+      },
+      {
+        "month": "2020-07-27",
+        "ret": 10.98,
+        "nav": 36081.0,
+        "spy_nav": 13097.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "TQQQ"
+        ]
+      },
+      {
+        "month": "2020-08-10",
+        "ret": 13.92,
+        "nav": 41103.0,
+        "spy_nav": 13384.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "TQQQ"
+        ]
+      },
+      {
+        "month": "2020-08-24",
+        "ret": 0.81,
+        "nav": 41437.0,
+        "spy_nav": 13005.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "LABU"
+        ]
+      },
+      {
+        "month": "2020-09-07",
+        "ret": -0.42,
+        "nav": 41261.0,
+        "spy_nav": 12813.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "TQQQ",
+          "SILJ"
+        ]
+      },
+      {
+        "month": "2020-09-21",
+        "ret": 0.62,
+        "nav": 41518.0,
+        "spy_nav": 13314.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "MTUM"
+        ]
+      },
+      {
+        "month": "2020-10-05",
+        "ret": 9.93,
+        "nav": 45641.0,
+        "spy_nav": 13402.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "TQQQ",
+          "SILJ"
+        ]
+      },
+      {
+        "month": "2020-10-19",
+        "ret": -7.74,
+        "nav": 42106.0,
+        "spy_nav": 12939.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "TQQQ",
+          "SILJ"
+        ]
+      },
+      {
+        "month": "2020-11-02",
+        "ret": 31.18,
+        "nav": 55233.0,
+        "spy_nav": 14208.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "LABU"
+        ]
+      },
+      {
+        "month": "2020-11-16",
+        "ret": -3.32,
+        "nav": 53401.0,
+        "spy_nav": 14188.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "PSQ",
+          "TBT",
+          "QID"
+        ]
+      },
+      {
+        "month": "2020-11-30",
+        "ret": 2.61,
+        "nav": 54793.0,
+        "spy_nav": 14289.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "FAS",
+          "UTSL"
+        ]
+      },
+      {
+        "month": "2020-12-14",
+        "ret": 0.63,
+        "nav": 55140.0,
+        "spy_nav": 14646.0,
+        "regime": "risk_off_falling",
+        "holdings": [
+          "DBMF",
+          "SLV",
+          "UGL"
+        ]
+      },
+      {
+        "month": "2020-12-28",
+        "ret": 5.66,
+        "nav": 58261.0,
+        "spy_nav": 14902.0,
+        "regime": "risk_off_falling",
+        "holdings": [
+          "BTAL",
+          "TMF"
+        ]
+      },
+      {
+        "month": "2021-01-11",
+        "ret": -2.3,
+        "nav": 56924.0,
+        "spy_nav": 15127.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "PSQ",
+          "TBF"
+        ]
+      },
+      {
+        "month": "2021-01-25",
+        "ret": -0.56,
+        "nav": 56606.0,
+        "spy_nav": 15368.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "JNUG"
+        ]
+      },
+      {
+        "month": "2021-02-08",
+        "ret": 2.12,
+        "nav": 57806.0,
+        "spy_nav": 15231.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "QID",
+          "TBT",
+          "PSQ"
+        ]
+      },
+      {
+        "month": "2021-02-22",
+        "ret": 1.22,
+        "nav": 58514.0,
+        "spy_nav": 15022.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "SQQQ",
+          "PSQ",
+          "BIL"
+        ]
+      },
+      {
+        "month": "2021-03-08",
+        "ret": 0.56,
+        "nav": 58842.0,
+        "spy_nav": 15500.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "BIL",
+          "TBF"
+        ]
+      },
+      {
+        "month": "2021-03-22",
+        "ret": -0.77,
+        "nav": 58387.0,
+        "spy_nav": 16044.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "BIL"
+        ]
+      },
+      {
+        "month": "2021-04-05",
+        "ret": -0.8,
+        "nav": 57919.0,
+        "spy_nav": 16393.0,
+        "regime": "risk_off_falling",
+        "holdings": [
+          "GLD",
+          "UUP",
+          "BTAL"
+        ]
+      },
+      {
+        "month": "2021-04-19",
+        "ret": -0.35,
+        "nav": 57717.0,
+        "spy_nav": 16511.0,
+        "regime": "risk_off_falling",
+        "holdings": [
+          "BTAL",
+          "UGL",
+          "UUP",
+          "SLV",
+          "NUGT"
+        ]
+      },
+      {
+        "month": "2021-05-03",
+        "ret": 2.89,
+        "nav": 59387.0,
+        "spy_nav": 16405.0,
+        "regime": "risk_off_falling",
+        "holdings": [
+          "TMF",
+          "UGL"
+        ]
+      },
+      {
+        "month": "2021-05-17",
+        "ret": -1.03,
+        "nav": 58773.0,
+        "spy_nav": 16569.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "PSQ",
+          "SQQQ",
+          "QID"
+        ]
+      },
+      {
+        "month": "2021-05-31",
+        "ret": 1.46,
+        "nav": 59633.0,
+        "spy_nav": 16790.0,
+        "regime": "risk_off_falling",
+        "holdings": [
+          "TMF",
+          "BTAL",
+          "SLV",
+          "DBMF"
+        ]
+      },
+      {
+        "month": "2021-06-14",
+        "ret": -5.31,
+        "nav": 56465.0,
+        "spy_nav": 16932.0,
+        "regime": "risk_off_falling",
+        "holdings": [
+          "NUGT",
+          "XLP",
+          "GLD",
+          "SLV",
+          "BTAL"
+        ]
+      },
+      {
+        "month": "2021-06-28",
+        "ret": -8.66,
+        "nav": 51573.0,
+        "spy_nav": 17313.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "UPRO"
+        ]
+      },
+      {
+        "month": "2021-07-12",
+        "ret": 5.15,
+        "nav": 54231.0,
+        "spy_nav": 17469.0,
+        "regime": "risk_off_falling",
+        "holdings": [
+          "BTAL",
+          "TMF"
+        ]
+      },
+      {
+        "month": "2021-07-26",
+        "ret": 12.15,
+        "nav": 60817.0,
+        "spy_nav": 17513.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "MSTR"
+        ]
+      },
+      {
+        "month": "2021-08-09",
+        "ret": -9.97,
+        "nav": 54754.0,
+        "spy_nav": 17716.0,
+        "regime": "risk_on",
+        "holdings": [
+          "IBIT",
+          "MSTR"
+        ]
+      },
+      {
+        "month": "2021-08-23",
+        "ret": 0.22,
+        "nav": 54875.0,
+        "spy_nav": 17883.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "CURE",
+          "MSTR"
+        ]
+      },
+      {
+        "month": "2021-09-06",
+        "ret": -8.0,
+        "nav": 50488.0,
+        "spy_nav": 17248.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "XLK"
+        ]
+      },
+      {
+        "month": "2021-09-20",
+        "ret": -2.93,
+        "nav": 49008.0,
+        "spy_nav": 17033.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "LABU"
+        ]
+      },
+      {
+        "month": "2021-10-04",
+        "ret": 17.7,
+        "nav": 57682.0,
+        "spy_nav": 17770.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "GBTC",
+          "GDXU"
+        ]
+      },
+      {
+        "month": "2021-10-18",
+        "ret": 5.38,
+        "nav": 60786.0,
+        "spy_nav": 18281.0,
+        "regime": "risk_off_falling",
+        "holdings": [
+          "TMF",
+          "BTAL",
+          "SLV",
+          "DBMF"
+        ]
+      },
+      {
+        "month": "2021-11-01",
+        "ret": 2.64,
+        "nav": 62391.0,
+        "spy_nav": 18575.0,
+        "regime": "risk_off_falling",
+        "holdings": [
+          "UUP",
+          "SLV",
+          "DBMF",
+          "KMLM",
+          "TAIL"
+        ]
+      },
+      {
+        "month": "2021-11-15",
+        "ret": 0.69,
+        "nav": 62824.0,
+        "spy_nav": 18462.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "QID",
+          "SQQQ"
+        ]
+      },
+      {
+        "month": "2021-11-29",
+        "ret": 14.99,
+        "nav": 72240.0,
+        "spy_nav": 18540.0,
+        "regime": "risk_off_falling",
+        "holdings": [
+          "TMF",
+          "UUP",
+          "DBMF",
+          "KMLM"
+        ]
+      },
+      {
+        "month": "2021-12-13",
+        "ret": -0.28,
+        "nav": 72037.0,
+        "spy_nav": 19032.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "TBF",
+          "BIL"
+        ]
+      },
+      {
+        "month": "2021-12-27",
+        "ret": -0.13,
+        "nav": 71944.0,
+        "spy_nav": 18563.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "TBF",
+          "BIL"
+        ]
+      },
+      {
+        "month": "2022-01-10",
+        "ret": 1.55,
+        "nav": 73057.0,
+        "spy_nav": 17540.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "TBF",
+          "PSQ"
+        ]
+      },
+      {
+        "month": "2022-01-24",
+        "ret": 0.42,
+        "nav": 73366.0,
+        "spy_nav": 17835.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "TBF",
+          "PSQ"
+        ]
+      },
+      {
+        "month": "2022-02-07",
+        "ret": -1.74,
+        "nav": 72086.0,
+        "spy_nav": 17130.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "TBF"
+        ]
+      },
+      {
+        "month": "2022-02-21",
+        "ret": -2.8,
+        "nav": 70068.0,
+        "spy_nav": 16726.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "TBF"
+        ]
+      },
+      {
+        "month": "2022-03-07",
+        "ret": -9.84,
+        "nav": 63171.0,
+        "spy_nav": 17776.0,
+        "regime": "risk_off_falling",
+        "holdings": [
+          "SLV",
+          "DBMF",
+          "GLD",
+          "UUP",
+          "TAIL"
+        ]
+      },
+      {
+        "month": "2022-03-21",
+        "ret": -4.58,
+        "nav": 60275.0,
+        "spy_nav": 18272.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "PSQ",
+          "BIL"
+        ]
+      },
+      {
+        "month": "2022-04-04",
+        "ret": 10.62,
+        "nav": 66674.0,
+        "spy_nav": 17519.0,
+        "regime": "risk_off_falling",
+        "holdings": [
+          "SLV",
+          "TMF",
+          "UGL",
+          "XLP",
+          "DBMF"
+        ]
+      },
+      {
+        "month": "2022-04-18",
+        "ret": 10.26,
+        "nav": 73517.0,
+        "spy_nav": 16580.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "BIL"
+        ]
+      },
+      {
+        "month": "2022-05-02",
+        "ret": 0.41,
+        "nav": 73816.0,
+        "spy_nav": 16004.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "QID",
+          "TBF"
+        ]
+      },
+      {
+        "month": "2022-05-16",
+        "ret": -7.33,
+        "nav": 68407.0,
+        "spy_nav": 16518.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "PSQ"
+        ]
+      },
+      {
+        "month": "2022-05-30",
+        "ret": 14.41,
+        "nav": 78262.0,
+        "spy_nav": 15000.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "QID",
+          "TBF"
+        ]
+      },
+      {
+        "month": "2022-06-13",
+        "ret": -7.36,
+        "nav": 72504.0,
+        "spy_nav": 15611.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "TBT",
+          "TBF",
+          "BIL"
+        ]
+      },
+      {
+        "month": "2022-06-27",
+        "ret": 13.28,
+        "nav": 82132.0,
+        "spy_nav": 15436.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "TBF"
+        ]
+      },
+      {
+        "month": "2022-07-11",
+        "ret": -2.45,
+        "nav": 80118.0,
+        "spy_nav": 15892.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "TBT",
+          "PSQ"
+        ]
+      },
+      {
+        "month": "2022-07-25",
+        "ret": 0.51,
+        "nav": 80527.0,
+        "spy_nav": 16591.0,
+        "regime": "risk_off_falling",
+        "holdings": [
+          "UUP",
+          "KMLM",
+          "TMF",
+          "SLV"
+        ]
+      },
+      {
+        "month": "2022-08-08",
+        "ret": -2.78,
+        "nav": 78291.0,
+        "spy_nav": 16606.0,
+        "regime": "risk_off_falling",
+        "holdings": [
+          "DBMF",
+          "NUGT",
+          "XLP",
+          "UGL",
+          "UUP"
+        ]
+      },
+      {
+        "month": "2022-08-22",
+        "ret": 16.37,
+        "nav": 91108.0,
+        "spy_nav": 15698.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "TBF"
+        ]
+      },
+      {
+        "month": "2022-09-05",
+        "ret": -9.06,
+        "nav": 82853.0,
+        "spy_nav": 15674.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "TBF"
+        ]
+      },
+      {
+        "month": "2022-09-19",
+        "ret": 9.47,
+        "nav": 90697.0,
+        "spy_nav": 14789.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "TBF"
+        ]
+      },
+      {
+        "month": "2022-10-03",
+        "ret": 1.78,
+        "nav": 92315.0,
+        "spy_nav": 14797.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "TBT",
+          "SQQQ"
+        ]
+      },
+      {
+        "month": "2022-10-17",
+        "ret": -4.8,
+        "nav": 87884.0,
+        "spy_nav": 15579.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "SQQQ",
+          "TBT",
+          "PSQ"
+        ]
+      },
+      {
+        "month": "2022-10-31",
+        "ret": 3.04,
+        "nav": 90558.0,
+        "spy_nav": 15939.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "SQQQ",
+          "TBT"
+        ]
+      },
+      {
+        "month": "2022-11-14",
+        "ret": -0.91,
+        "nav": 89730.0,
+        "spy_nav": 15971.0,
+        "regime": "risk_off_falling",
+        "holdings": [
+          "UGL",
+          "BTAL",
+          "TAIL",
+          "KMLM"
+        ]
+      },
+      {
+        "month": "2022-11-28",
+        "ret": 1.37,
+        "nav": 90957.0,
+        "spy_nav": 16093.0,
+        "regime": "risk_off_falling",
+        "holdings": [
+          "XLP",
+          "GLD"
+        ]
+      },
+      {
+        "month": "2022-12-12",
+        "ret": 11.15,
+        "nav": 101101.0,
+        "spy_nav": 15456.0,
+        "regime": "risk_off_falling",
+        "holdings": [
+          "KMLM",
+          "UGL",
+          "TMF",
+          "NUGT",
+          "SLV"
+        ]
+      },
+      {
+        "month": "2022-12-26",
+        "ret": -2.82,
+        "nav": 98254.0,
+        "spy_nav": 15718.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "TBT",
+          "QID",
+          "TBF"
+        ]
+      },
+      {
+        "month": "2023-01-09",
+        "ret": 12.67,
+        "nav": 110707.0,
+        "spy_nav": 16235.0,
+        "regime": "risk_off_falling",
+        "holdings": [
+          "KMLM",
+          "UGL",
+          "TMF",
+          "NUGT",
+          "SLV"
+        ]
+      },
+      {
+        "month": "2023-01-23",
+        "ret": 3.71,
+        "nav": 114811.0,
+        "spy_nav": 16608.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "UPRO",
+          "DRN"
+        ]
+      },
+      {
+        "month": "2023-02-06",
+        "ret": -1.62,
+        "nav": 112954.0,
+        "spy_nav": 16173.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "UPRO",
+          "DRN"
+        ]
+      },
+      {
+        "month": "2023-02-20",
+        "ret": 0.37,
+        "nav": 113371.0,
+        "spy_nav": 16391.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "UPRO",
+          "DRN"
+        ]
+      },
+      {
+        "month": "2023-03-06",
+        "ret": 18.04,
+        "nav": 133818.0,
+        "spy_nav": 16017.0,
+        "regime": "risk_off_falling",
+        "holdings": [
+          "KMLM",
+          "UUP"
+        ]
+      },
+      {
+        "month": "2023-03-20",
+        "ret": 3.15,
+        "nav": 138030.0,
+        "spy_nav": 16717.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "QID"
+        ]
+      },
+      {
+        "month": "2023-04-03",
+        "ret": -6.01,
+        "nav": 129740.0,
+        "spy_nav": 16839.0,
+        "regime": "risk_off_falling",
+        "holdings": [
+          "SLV",
+          "UGL"
+        ]
+      },
+      {
+        "month": "2023-04-17",
+        "ret": 4.07,
+        "nav": 135020.0,
+        "spy_nav": 16902.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "SQQQ",
+          "TBT"
+        ]
+      },
+      {
+        "month": "2023-05-01",
+        "ret": -1.35,
+        "nav": 133191.0,
+        "spy_nav": 16801.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "BIL"
+        ]
+      },
+      {
+        "month": "2023-05-15",
+        "ret": 6.78,
+        "nav": 142222.0,
+        "spy_nav": 17092.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "BIL",
+          "PSQ"
+        ]
+      },
+      {
+        "month": "2023-05-29",
+        "ret": -2.05,
+        "nav": 139307.0,
+        "spy_nav": 17646.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "SQQQ",
+          "TBT"
+        ]
+      },
+      {
+        "month": "2023-06-12",
+        "ret": 0.06,
+        "nav": 139395.0,
+        "spy_nav": 17616.0,
+        "regime": "risk_off_falling",
+        "holdings": [
+          "UUP",
+          "XLP",
+          "KMLM",
+          "GLD",
+          "DBMF"
+        ]
+      },
+      {
+        "month": "2023-06-26",
+        "ret": -0.08,
+        "nav": 139281.0,
+        "spy_nav": 17951.0,
+        "regime": "risk_off_falling",
+        "holdings": [
+          "UUP",
+          "XLP",
+          "KMLM",
+          "GLD",
+          "DBMF"
+        ]
+      },
+      {
+        "month": "2023-07-10",
+        "ret": -4.37,
+        "nav": 133201.0,
+        "spy_nav": 18545.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "TBT",
+          "QID",
+          "TBF"
+        ]
+      },
+      {
+        "month": "2023-07-24",
+        "ret": 0.88,
+        "nav": 134378.0,
+        "spy_nav": 18402.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "GDXU"
+        ]
+      },
+      {
+        "month": "2023-08-07",
+        "ret": 7.17,
+        "nav": 144011.0,
+        "spy_nav": 17938.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "SQQQ",
+          "TBT"
+        ]
+      },
+      {
+        "month": "2023-08-21",
+        "ret": -3.75,
+        "nav": 138604.0,
+        "spy_nav": 18342.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "TBF",
+          "TBT",
+          "BIL"
+        ]
+      },
+      {
+        "month": "2023-09-04",
+        "ret": 0.28,
+        "nav": 138989.0,
+        "spy_nav": 18177.0,
+        "regime": "risk_off_falling",
+        "holdings": [
+          "NUGT",
+          "XLP",
+          "TAIL"
+        ]
+      },
+      {
+        "month": "2023-09-18",
+        "ret": 8.35,
+        "nav": 150598.0,
+        "spy_nav": 17509.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "TBT"
+        ]
+      },
+      {
+        "month": "2023-10-02",
+        "ret": 0.09,
+        "nav": 150738.0,
+        "spy_nav": 17866.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "TBT",
+          "TBF",
+          "QID"
+        ]
+      },
+      {
+        "month": "2023-10-16",
+        "ret": 4.14,
+        "nav": 156984.0,
+        "spy_nav": 17028.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "TBT",
+          "TBF"
+        ]
+      },
+      {
+        "month": "2023-10-30",
+        "ret": -2.12,
+        "nav": 153655.0,
+        "spy_nav": 18036.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "PSQ"
+        ]
+      },
+      {
+        "month": "2023-11-13",
+        "ret": 0.35,
+        "nav": 154192.0,
+        "spy_nav": 18622.0,
+        "regime": "risk_off_falling",
+        "holdings": [
+          "KMLM",
+          "UGL"
+        ]
+      },
+      {
+        "month": "2023-11-27",
+        "ret": 3.69,
+        "nav": 159881.0,
+        "spy_nav": 18930.0,
+        "regime": "risk_off_falling",
+        "holdings": [
+          "UUP",
+          "NUGT"
+        ]
+      },
+      {
+        "month": "2023-12-11",
+        "ret": 12.42,
+        "nav": 179732.0,
+        "spy_nav": 19568.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "UPRO",
+          "DRN"
+        ]
+      },
+      {
+        "month": "2023-12-25",
+        "ret": -3.16,
+        "nav": 174060.0,
+        "spy_nav": 19525.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "MTUM"
+        ]
+      },
+      {
+        "month": "2024-01-08",
+        "ret": -1.96,
+        "nav": 170645.0,
+        "spy_nav": 19889.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "XLK",
+          "JNUG"
+        ]
+      },
+      {
+        "month": "2024-01-22",
+        "ret": 2.35,
+        "nav": 174654.0,
+        "spy_nav": 20264.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "GBTC"
+        ]
+      },
+      {
+        "month": "2024-02-05",
+        "ret": 5.18,
+        "nav": 183699.0,
+        "spy_nav": 20437.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "MTUM"
+        ]
+      },
+      {
+        "month": "2024-02-19",
+        "ret": 22.67,
+        "nav": 225346.0,
+        "spy_nav": 21076.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "LABU"
+        ]
+      },
+      {
+        "month": "2024-03-04",
+        "ret": -5.22,
+        "nav": 213588.0,
+        "spy_nav": 21165.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "MIDU",
+          "SILJ"
+        ]
+      },
+      {
+        "month": "2024-03-18",
+        "ret": 3.07,
+        "nav": 220148.0,
+        "spy_nav": 21548.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "QQQM"
+        ]
+      },
+      {
+        "month": "2024-04-01",
+        "ret": 0.42,
+        "nav": 221078.0,
+        "spy_nav": 20818.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "MTUM"
+        ]
+      },
+      {
+        "month": "2024-04-15",
+        "ret": 3.1,
+        "nav": 227936.0,
+        "spy_nav": 21049.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "QID",
+          "SQQQ"
+        ]
+      },
+      {
+        "month": "2024-04-29",
+        "ret": -1.22,
+        "nav": 225148.0,
+        "spy_nav": 21497.0,
+        "regime": "risk_off_falling",
+        "holdings": [
+          "GLD",
+          "UUP"
+        ]
+      },
+      {
+        "month": "2024-05-13",
+        "ret": 2.27,
+        "nav": 230261.0,
+        "spy_nav": 21864.0,
+        "regime": "risk_off_falling",
+        "holdings": [
+          "BTAL",
+          "SLV",
+          "NUGT",
+          "UGL",
+          "DBMF"
+        ]
+      },
+      {
+        "month": "2024-05-27",
+        "ret": -0.87,
+        "nav": 228268.0,
+        "spy_nav": 22106.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "TBF",
+          "SQQQ"
+        ]
+      },
+      {
+        "month": "2024-06-10",
+        "ret": 0.14,
+        "nav": 228581.0,
+        "spy_nav": 22470.0,
+        "regime": "risk_off_falling",
+        "holdings": [
+          "UGL",
+          "SLV",
+          "DBMF",
+          "NUGT"
+        ]
+      },
+      {
+        "month": "2024-06-24",
+        "ret": -0.04,
+        "nav": 228482.0,
+        "spy_nav": 22989.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "GDXU",
+          "FAS"
+        ]
+      },
+      {
+        "month": "2024-07-08",
+        "ret": 1.07,
+        "nav": 230924.0,
+        "spy_nav": 22963.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "BIL"
+        ]
+      },
+      {
+        "month": "2024-07-22",
+        "ret": -17.86,
+        "nav": 189685.0,
+        "spy_nav": 21420.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "VGT"
+        ]
+      },
+      {
+        "month": "2024-08-05",
+        "ret": 17.68,
+        "nav": 223219.0,
+        "spy_nav": 23168.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "MIDU",
+          "SILJ"
+        ]
+      },
+      {
+        "month": "2024-08-19",
+        "ret": -3.76,
+        "nav": 214818.0,
+        "spy_nav": 22857.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "GDXU"
+        ]
+      },
+      {
+        "month": "2024-09-02",
+        "ret": 5.2,
+        "nav": 225993.0,
+        "spy_nav": 23302.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "XLK"
+        ]
+      },
+      {
+        "month": "2024-09-16",
+        "ret": 9.68,
+        "nav": 247860.0,
+        "spy_nav": 23827.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "CURE"
+        ]
+      },
+      {
+        "month": "2024-09-30",
+        "ret": 0.48,
+        "nav": 249039.0,
+        "spy_nav": 24266.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "TNA",
+          "MSTR"
+        ]
+      },
+      {
+        "month": "2024-10-14",
+        "ret": -0.4,
+        "nav": 248046.0,
+        "spy_nav": 24121.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "CURE"
+        ]
+      },
+      {
+        "month": "2024-10-28",
+        "ret": -2.9,
+        "nav": 240843.0,
+        "spy_nav": 24865.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "MSTR",
+          "SILJ"
+        ]
+      },
+      {
+        "month": "2024-11-11",
+        "ret": -0.33,
+        "nav": 240045.0,
+        "spy_nav": 24814.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "TBT",
+          "TBF",
+          "BIL"
+        ]
+      },
+      {
+        "month": "2024-11-25",
+        "ret": -0.87,
+        "nav": 237949.0,
+        "spy_nav": 25111.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "EET",
+          "FAS"
+        ]
+      },
+      {
+        "month": "2024-12-09",
+        "ret": 1.01,
+        "nav": 240345.0,
+        "spy_nav": 24779.0,
+        "regime": "risk_off_falling",
+        "holdings": [
+          "DBMF",
+          "UGL",
+          "GLD",
+          "XLP"
+        ]
+      },
+      {
+        "month": "2024-12-23",
+        "ret": 1.95,
+        "nav": 245028.0,
+        "spy_nav": 24807.0,
+        "regime": "risk_off_rising",
+        "holdings": [
+          "TBT"
+        ]
+      },
+      {
+        "month": "2025-01-06",
+        "ret": 0.43,
+        "nav": 246070.0,
+        "spy_nav": 25128.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "JNUG",
+          "MSTR"
+        ]
+      },
+      {
+        "month": "2025-01-20",
+        "ret": 5.83,
+        "nav": 260422.0,
+        "spy_nav": 24908.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "TECL"
+        ]
+      },
+      {
+        "month": "2025-02-03",
+        "ret": 0.03,
+        "nav": 260510.0,
+        "spy_nav": 25479.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "SPXL",
+          "MSTR"
+        ]
+      },
+      {
+        "month": "2025-02-17",
+        "ret": -2.27,
+        "nav": 254601.0,
+        "spy_nav": 24324.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "BITX",
+          "UPRO"
+        ]
+      },
+      {
+        "month": "2025-03-03",
+        "ret": 8.71,
+        "nav": 276776.0,
+        "spy_nav": 23632.0,
+        "regime": "risk_on",
+        "holdings": [
+          "VNQ",
+          "MSTR"
+        ]
+      },
+      {
+        "month": "2025-03-17",
+        "ret": 3.91,
+        "nav": 287606.0,
+        "spy_nav": 23379.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "MSTR"
+        ]
+      },
+      {
+        "month": "2025-03-31",
+        "ret": -8.13,
+        "nav": 264213.0,
+        "spy_nav": 22531.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "SPXL"
+        ]
+      },
+      {
+        "month": "2025-04-14",
+        "ret": -0.84,
+        "nav": 261999.0,
+        "spy_nav": 23022.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "XLK",
+          "JNUG"
+        ]
+      },
+      {
+        "month": "2025-04-28",
+        "ret": 6.88,
+        "nav": 280022.0,
+        "spy_nav": 24365.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "MIDU",
+          "FPX"
+        ]
+      },
+      {
+        "month": "2025-05-12",
+        "ret": 2.9,
+        "nav": 288142.0,
+        "spy_nav": 24706.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "GDXU"
+        ]
+      },
+      {
+        "month": "2025-05-26",
+        "ret": 2.41,
+        "nav": 295084.0,
+        "spy_nav": 25062.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "SIL",
+          "UTSL"
+        ]
+      },
+      {
+        "month": "2025-06-09",
+        "ret": -3.24,
+        "nav": 285515.0,
+        "spy_nav": 25156.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "SIL"
+        ]
+      },
+      {
+        "month": "2025-06-23",
+        "ret": -4.56,
+        "nav": 272491.0,
+        "spy_nav": 26017.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "SIL"
+        ]
+      },
+      {
+        "month": "2025-07-07",
+        "ret": 0.69,
+        "nav": 274367.0,
+        "spy_nav": 26356.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "TECL"
+        ]
+      },
+      {
+        "month": "2025-07-21",
+        "ret": -0.43,
+        "nav": 273178.0,
+        "spy_nav": 26457.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "FPX",
+          "SIL"
+        ]
+      },
+      {
+        "month": "2025-08-04",
+        "ret": 3.56,
+        "nav": 282891.0,
+        "spy_nav": 26965.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "TECL"
+        ]
+      },
+      {
+        "month": "2025-08-18",
+        "ret": -2.36,
+        "nav": 276205.0,
+        "spy_nav": 26838.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "XLK"
+        ]
+      },
+      {
+        "month": "2025-09-01",
+        "ret": 14.77,
+        "nav": 316994.0,
+        "spy_nav": 27703.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "SIL"
+        ]
+      },
+      {
+        "month": "2025-09-15",
+        "ret": 9.02,
+        "nav": 345577.0,
+        "spy_nav": 27896.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "GDXU"
+        ]
+      },
+      {
+        "month": "2025-09-29",
+        "ret": 12.39,
+        "nav": 388385.0,
+        "spy_nav": 27869.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "TECL"
+        ]
+      },
+      {
+        "month": "2025-10-13",
+        "ret": 5.22,
+        "nav": 408650.0,
+        "spy_nav": 28803.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "ERX",
+          "SILJ"
+        ]
+      },
+      {
+        "month": "2025-10-27",
+        "ret": -4.34,
+        "nav": 390919.0,
+        "spy_nav": 28643.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "LABU"
+        ]
+      },
+      {
+        "month": "2025-11-10",
+        "ret": -4.44,
+        "nav": 373578.0,
+        "spy_nav": 28109.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "MIDU"
+        ]
+      },
+      {
+        "month": "2025-11-24",
+        "ret": 22.84,
+        "nav": 458917.0,
+        "spy_nav": 28735.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "SILJ"
+        ]
+      },
+      {
+        "month": "2025-12-08",
+        "ret": -6.54,
+        "nav": 428888.0,
+        "spy_nav": 28870.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "TQQQ"
+        ]
+      },
+      {
+        "month": "2025-12-22",
+        "ret": -1.36,
+        "nav": 423048.0,
+        "spy_nav": 28992.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "UPRO",
+          "VGT"
+        ]
+      },
+      {
+        "month": "2026-01-05",
+        "ret": -2.64,
+        "nav": 411868.0,
+        "spy_nav": 28565.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "FNGU"
+        ]
+      },
+      {
+        "month": "2026-01-19",
+        "ret": 7.71,
+        "nav": 443626.0,
+        "spy_nav": 29316.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "SPXL"
+        ]
+      },
+      {
+        "month": "2026-02-02",
+        "ret": 13.87,
+        "nav": 505168.0,
+        "spy_nav": 28787.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "LABU",
+          "SIL"
+        ]
+      },
+      {
+        "month": "2026-02-16",
+        "ret": 22.81,
+        "nav": 620419.0,
+        "spy_nav": 28936.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SILJ",
+          "MSTR"
+        ]
+      },
+      {
+        "month": "2026-03-02",
+        "ret": -9.08,
+        "nav": 564073.0,
+        "spy_nav": 28204.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "SILJ"
+        ]
+      },
+      {
+        "month": "2026-03-16",
+        "ret": 0.05,
+        "nav": 564378.0,
+        "spy_nav": 26715.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "SILJ",
+          "GDXU"
+        ]
+      },
+      {
+        "month": "2026-03-30",
+        "ret": -0.23,
+        "nav": 563062.0,
+        "spy_nav": 29003.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "TECL"
+        ]
+      },
+      {
+        "month": "2026-04-13",
+        "ret": -0.11,
+        "nav": 562415.0,
+        "spy_nav": 30232.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "JNUG"
+        ]
+      },
+      {
+        "month": "2026-04-27",
+        "ret": -1.08,
+        "nav": 556333.0,
+        "spy_nav": 31252.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "TECL"
+        ]
+      },
+      {
+        "month": "2026-05-11",
+        "ret": -0.33,
+        "nav": 554499.0,
+        "spy_nav": 31729.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "LABU",
+          "SIL"
+        ]
+      },
+      {
+        "month": "2026-05-25",
+        "ret": 0.11,
+        "nav": 555098.0,
+        "spy_nav": 31729.0,
+        "regime": "risk_on",
+        "holdings": [
+          "SOXL",
+          "LABU",
+          "SIL"
+        ]
+      }
+    ],
+    "final_nav": 555098.0,
+    "max_dd": 28.4
+  },
+  "spy": {
+    "label": "SPY",
+    "periods": [
+      {
+        "month": "2018-01-01",
+        "nav": 10305.0
+      },
+      {
+        "month": "2018-01-15",
+        "nav": 10592.0
+      },
+      {
+        "month": "2018-01-29",
+        "nav": 9872.0
+      },
+      {
+        "month": "2018-02-12",
+        "nav": 10340.0
+      },
+      {
+        "month": "2018-02-26",
+        "nav": 10363.0
+      },
+      {
+        "month": "2018-03-12",
+        "nav": 9903.0
+      },
+      {
+        "month": "2018-03-26",
+        "nav": 9750.0
+      },
+      {
+        "month": "2018-04-09",
+        "nav": 9958.0
+      },
+      {
+        "month": "2018-04-23",
+        "nav": 9971.0
+      },
+      {
+        "month": "2018-05-07",
+        "nav": 10212.0
+      },
+      {
+        "month": "2018-05-21",
+        "nav": 10269.0
+      },
+      {
+        "month": "2018-06-04",
+        "nav": 10377.0
+      },
+      {
+        "month": "2018-06-18",
+        "nav": 10201.0
+      },
+      {
+        "month": "2018-07-02",
+        "nav": 10482.0
+      },
+      {
+        "month": "2018-07-16",
+        "nav": 10505.0
+      },
+      {
+        "month": "2018-07-30",
+        "nav": 10585.0
+      },
+      {
+        "month": "2018-08-13",
+        "nav": 10873.0
+      },
+      {
+        "month": "2018-08-27",
+        "nav": 10810.0
+      },
+      {
+        "month": "2018-09-10",
+        "nav": 10969.0
+      },
+      {
+        "month": "2018-09-24",
+        "nav": 10849.0
+      },
+      {
+        "month": "2018-10-08",
+        "nav": 10366.0
+      },
+      {
+        "month": "2018-10-22",
+        "nav": 10305.0
+      },
+      {
+        "month": "2018-11-05",
+        "nav": 10143.0
+      },
+      {
+        "month": "2018-11-19",
+        "nav": 10528.0
+      },
+      {
+        "month": "2018-12-03",
+        "nav": 9625.0
+      },
+      {
+        "month": "2018-12-17",
+        "nav": 9475.0
+      },
+      {
+        "month": "2018-12-31",
+        "nav": 9759.0
+      },
+      {
+        "month": "2019-01-14",
+        "nav": 10000.0
+      },
+      {
+        "month": "2019-01-28",
+        "nav": 10260.0
+      },
+      {
+        "month": "2019-02-11",
+        "nav": 10598.0
+      },
+      {
+        "month": "2019-02-25",
+        "nav": 10557.0
+      },
+      {
+        "month": "2019-03-11",
+        "nav": 10626.0
+      },
+      {
+        "month": "2019-03-25",
+        "nav": 10997.0
+      },
+      {
+        "month": "2019-04-08",
+        "nav": 11054.0
+      },
+      {
+        "month": "2019-04-22",
+        "nav": 11151.0
+      },
+      {
+        "month": "2019-05-06",
+        "nav": 10813.0
+      },
+      {
+        "month": "2019-05-20",
+        "nav": 10456.0
+      },
+      {
+        "month": "2019-06-03",
+        "nav": 11019.0
+      },
+      {
+        "month": "2019-06-17",
+        "nav": 11314.0
+      },
+      {
+        "month": "2019-07-01",
+        "nav": 11508.0
+      },
+      {
+        "month": "2019-07-15",
+        "nav": 11536.0
+      },
+      {
+        "month": "2019-07-29",
+        "nav": 11023.0
+      },
+      {
+        "month": "2019-08-12",
+        "nav": 11020.0
+      },
+      {
+        "month": "2019-08-26",
+        "nav": 11411.0
+      },
+      {
+        "month": "2019-09-09",
+        "nav": 11464.0
+      },
+      {
+        "month": "2019-09-23",
+        "nav": 11267.0
+      },
+      {
+        "month": "2019-10-07",
+        "nav": 11532.0
+      },
+      {
+        "month": "2019-10-21",
+        "nav": 11816.0
+      },
+      {
+        "month": "2019-11-04",
+        "nav": 11995.0
+      },
+      {
+        "month": "2019-11-18",
+        "nav": 11980.0
+      },
+      {
+        "month": "2019-12-02",
+        "nav": 12282.0
+      },
+      {
+        "month": "2019-12-16",
+        "nav": 12404.0
+      },
+      {
+        "month": "2019-12-30",
+        "nav": 12669.0
+      },
+      {
+        "month": "2020-01-13",
+        "nav": 12497.0
+      },
+      {
+        "month": "2020-01-27",
+        "nav": 12929.0
+      },
+      {
+        "month": "2020-02-10",
+        "nav": 12455.0
+      },
+      {
+        "month": "2020-02-24",
+        "nav": 10594.0
+      },
+      {
+        "month": "2020-03-09",
+        "nav": 8663.0
+      },
+      {
+        "month": "2020-03-23",
+        "nav": 10292.0
+      },
+      {
+        "month": "2020-04-06",
+        "nav": 10942.0
+      },
+      {
+        "month": "2020-04-20",
+        "nav": 11019.0
+      },
+      {
+        "month": "2020-05-04",
+        "nav": 11463.0
+      },
+      {
+        "month": "2020-05-18",
+        "nav": 11873.0
+      },
+      {
+        "month": "2020-06-01",
+        "nav": 11931.0
+      },
+      {
+        "month": "2020-06-15",
+        "nav": 11883.0
+      },
+      {
+        "month": "2020-06-29",
+        "nav": 12288.0
+      },
+      {
+        "month": "2020-07-13",
+        "nav": 12615.0
+      },
+      {
+        "month": "2020-07-27",
+        "nav": 13097.0
+      },
+      {
+        "month": "2020-08-10",
+        "nav": 13384.0
+      },
+      {
+        "month": "2020-08-24",
+        "nav": 13005.0
+      },
+      {
+        "month": "2020-09-07",
+        "nav": 12813.0
+      },
+      {
+        "month": "2020-09-21",
+        "nav": 13314.0
+      },
+      {
+        "month": "2020-10-05",
+        "nav": 13402.0
+      },
+      {
+        "month": "2020-10-19",
+        "nav": 12939.0
+      },
+      {
+        "month": "2020-11-02",
+        "nav": 14208.0
+      },
+      {
+        "month": "2020-11-16",
+        "nav": 14188.0
+      },
+      {
+        "month": "2020-11-30",
+        "nav": 14289.0
+      },
+      {
+        "month": "2020-12-14",
+        "nav": 14646.0
+      },
+      {
+        "month": "2020-12-28",
+        "nav": 14902.0
+      },
+      {
+        "month": "2021-01-11",
+        "nav": 15127.0
+      },
+      {
+        "month": "2021-01-25",
+        "nav": 15368.0
+      },
+      {
+        "month": "2021-02-08",
+        "nav": 15231.0
+      },
+      {
+        "month": "2021-02-22",
+        "nav": 15022.0
+      },
+      {
+        "month": "2021-03-08",
+        "nav": 15500.0
+      },
+      {
+        "month": "2021-03-22",
+        "nav": 16044.0
+      },
+      {
+        "month": "2021-04-05",
+        "nav": 16393.0
+      },
+      {
+        "month": "2021-04-19",
+        "nav": 16511.0
+      },
+      {
+        "month": "2021-05-03",
+        "nav": 16405.0
+      },
+      {
+        "month": "2021-05-17",
+        "nav": 16569.0
+      },
+      {
+        "month": "2021-05-31",
+        "nav": 16790.0
+      },
+      {
+        "month": "2021-06-14",
+        "nav": 16932.0
+      },
+      {
+        "month": "2021-06-28",
+        "nav": 17313.0
+      },
+      {
+        "month": "2021-07-12",
+        "nav": 17469.0
+      },
+      {
+        "month": "2021-07-26",
+        "nav": 17513.0
+      },
+      {
+        "month": "2021-08-09",
+        "nav": 17716.0
+      },
+      {
+        "month": "2021-08-23",
+        "nav": 17883.0
+      },
+      {
+        "month": "2021-09-06",
+        "nav": 17248.0
+      },
+      {
+        "month": "2021-09-20",
+        "nav": 17033.0
+      },
+      {
+        "month": "2021-10-04",
+        "nav": 17770.0
+      },
+      {
+        "month": "2021-10-18",
+        "nav": 18281.0
+      },
+      {
+        "month": "2021-11-01",
+        "nav": 18575.0
+      },
+      {
+        "month": "2021-11-15",
+        "nav": 18462.0
+      },
+      {
+        "month": "2021-11-29",
+        "nav": 18540.0
+      },
+      {
+        "month": "2021-12-13",
+        "nav": 19032.0
+      },
+      {
+        "month": "2021-12-27",
+        "nav": 18563.0
+      },
+      {
+        "month": "2022-01-10",
+        "nav": 17540.0
+      },
+      {
+        "month": "2022-01-24",
+        "nav": 17835.0
+      },
+      {
+        "month": "2022-02-07",
+        "nav": 17130.0
+      },
+      {
+        "month": "2022-02-21",
+        "nav": 16726.0
+      },
+      {
+        "month": "2022-03-07",
+        "nav": 17776.0
+      },
+      {
+        "month": "2022-03-21",
+        "nav": 18272.0
+      },
+      {
+        "month": "2022-04-04",
+        "nav": 17519.0
+      },
+      {
+        "month": "2022-04-18",
+        "nav": 16580.0
+      },
+      {
+        "month": "2022-05-02",
+        "nav": 16004.0
+      },
+      {
+        "month": "2022-05-16",
+        "nav": 16518.0
+      },
+      {
+        "month": "2022-05-30",
+        "nav": 15000.0
+      },
+      {
+        "month": "2022-06-13",
+        "nav": 15611.0
+      },
+      {
+        "month": "2022-06-27",
+        "nav": 15436.0
+      },
+      {
+        "month": "2022-07-11",
+        "nav": 15892.0
+      },
+      {
+        "month": "2022-07-25",
+        "nav": 16591.0
+      },
+      {
+        "month": "2022-08-08",
+        "nav": 16606.0
+      },
+      {
+        "month": "2022-08-22",
+        "nav": 15698.0
+      },
+      {
+        "month": "2022-09-05",
+        "nav": 15674.0
+      },
+      {
+        "month": "2022-09-19",
+        "nav": 14789.0
+      },
+      {
+        "month": "2022-10-03",
+        "nav": 14797.0
+      },
+      {
+        "month": "2022-10-17",
+        "nav": 15579.0
+      },
+      {
+        "month": "2022-10-31",
+        "nav": 15939.0
+      },
+      {
+        "month": "2022-11-14",
+        "nav": 15971.0
+      },
+      {
+        "month": "2022-11-28",
+        "nav": 16093.0
+      },
+      {
+        "month": "2022-12-12",
+        "nav": 15456.0
+      },
+      {
+        "month": "2022-12-26",
+        "nav": 15718.0
+      },
+      {
+        "month": "2023-01-09",
+        "nav": 16235.0
+      },
+      {
+        "month": "2023-01-23",
+        "nav": 16608.0
+      },
+      {
+        "month": "2023-02-06",
+        "nav": 16173.0
+      },
+      {
+        "month": "2023-02-20",
+        "nav": 16391.0
+      },
+      {
+        "month": "2023-03-06",
+        "nav": 16017.0
+      },
+      {
+        "month": "2023-03-20",
+        "nav": 16717.0
+      },
+      {
+        "month": "2023-04-03",
+        "nav": 16839.0
+      },
+      {
+        "month": "2023-04-17",
+        "nav": 16902.0
+      },
+      {
+        "month": "2023-05-01",
+        "nav": 16801.0
+      },
+      {
+        "month": "2023-05-15",
+        "nav": 17092.0
+      },
+      {
+        "month": "2023-05-29",
+        "nav": 17646.0
+      },
+      {
+        "month": "2023-06-12",
+        "nav": 17616.0
+      },
+      {
+        "month": "2023-06-26",
+        "nav": 17951.0
+      },
+      {
+        "month": "2023-07-10",
+        "nav": 18545.0
+      },
+      {
+        "month": "2023-07-24",
+        "nav": 18402.0
+      },
+      {
+        "month": "2023-08-07",
+        "nav": 17938.0
+      },
+      {
+        "month": "2023-08-21",
+        "nav": 18342.0
+      },
+      {
+        "month": "2023-09-04",
+        "nav": 18177.0
+      },
+      {
+        "month": "2023-09-18",
+        "nav": 17509.0
+      },
+      {
+        "month": "2023-10-02",
+        "nav": 17866.0
+      },
+      {
+        "month": "2023-10-16",
+        "nav": 17028.0
+      },
+      {
+        "month": "2023-10-30",
+        "nav": 18036.0
+      },
+      {
+        "month": "2023-11-13",
+        "nav": 18622.0
+      },
+      {
+        "month": "2023-11-27",
+        "nav": 18930.0
+      },
+      {
+        "month": "2023-12-11",
+        "nav": 19568.0
+      },
+      {
+        "month": "2023-12-25",
+        "nav": 19525.0
+      },
+      {
+        "month": "2024-01-08",
+        "nav": 19889.0
+      },
+      {
+        "month": "2024-01-22",
+        "nav": 20264.0
+      },
+      {
+        "month": "2024-02-05",
+        "nav": 20437.0
+      },
+      {
+        "month": "2024-02-19",
+        "nav": 21076.0
+      },
+      {
+        "month": "2024-03-04",
+        "nav": 21165.0
+      },
+      {
+        "month": "2024-03-18",
+        "nav": 21548.0
+      },
+      {
+        "month": "2024-04-01",
+        "nav": 20818.0
+      },
+      {
+        "month": "2024-04-15",
+        "nav": 21049.0
+      },
+      {
+        "month": "2024-04-29",
+        "nav": 21497.0
+      },
+      {
+        "month": "2024-05-13",
+        "nav": 21864.0
+      },
+      {
+        "month": "2024-05-27",
+        "nav": 22106.0
+      },
+      {
+        "month": "2024-06-10",
+        "nav": 22470.0
+      },
+      {
+        "month": "2024-06-24",
+        "nav": 22989.0
+      },
+      {
+        "month": "2024-07-08",
+        "nav": 22963.0
+      },
+      {
+        "month": "2024-07-22",
+        "nav": 21420.0
+      },
+      {
+        "month": "2024-08-05",
+        "nav": 23168.0
+      },
+      {
+        "month": "2024-08-19",
+        "nav": 22857.0
+      },
+      {
+        "month": "2024-09-02",
+        "nav": 23302.0
+      },
+      {
+        "month": "2024-09-16",
+        "nav": 23827.0
+      },
+      {
+        "month": "2024-09-30",
+        "nav": 24266.0
+      },
+      {
+        "month": "2024-10-14",
+        "nav": 24121.0
+      },
+      {
+        "month": "2024-10-28",
+        "nav": 24865.0
+      },
+      {
+        "month": "2024-11-11",
+        "nav": 24814.0
+      },
+      {
+        "month": "2024-11-25",
+        "nav": 25111.0
+      },
+      {
+        "month": "2024-12-09",
+        "nav": 24779.0
+      },
+      {
+        "month": "2024-12-23",
+        "nav": 24807.0
+      },
+      {
+        "month": "2025-01-06",
+        "nav": 25128.0
+      },
+      {
+        "month": "2025-01-20",
+        "nav": 24908.0
+      },
+      {
+        "month": "2025-02-03",
+        "nav": 25479.0
+      },
+      {
+        "month": "2025-02-17",
+        "nav": 24324.0
+      },
+      {
+        "month": "2025-03-03",
+        "nav": 23632.0
+      },
+      {
+        "month": "2025-03-17",
+        "nav": 23379.0
+      },
+      {
+        "month": "2025-03-31",
+        "nav": 22531.0
+      },
+      {
+        "month": "2025-04-14",
+        "nav": 23022.0
+      },
+      {
+        "month": "2025-04-28",
+        "nav": 24365.0
+      },
+      {
+        "month": "2025-05-12",
+        "nav": 24706.0
+      },
+      {
+        "month": "2025-05-26",
+        "nav": 25062.0
+      },
+      {
+        "month": "2025-06-09",
+        "nav": 25156.0
+      },
+      {
+        "month": "2025-06-23",
+        "nav": 26017.0
+      },
+      {
+        "month": "2025-07-07",
+        "nav": 26356.0
+      },
+      {
+        "month": "2025-07-21",
+        "nav": 26457.0
+      },
+      {
+        "month": "2025-08-04",
+        "nav": 26965.0
+      },
+      {
+        "month": "2025-08-18",
+        "nav": 26838.0
+      },
+      {
+        "month": "2025-09-01",
+        "nav": 27703.0
+      },
+      {
+        "month": "2025-09-15",
+        "nav": 27896.0
+      },
+      {
+        "month": "2025-09-29",
+        "nav": 27869.0
+      },
+      {
+        "month": "2025-10-13",
+        "nav": 28803.0
+      },
+      {
+        "month": "2025-10-27",
+        "nav": 28643.0
+      },
+      {
+        "month": "2025-11-10",
+        "nav": 28109.0
+      },
+      {
+        "month": "2025-11-24",
+        "nav": 28735.0
+      },
+      {
+        "month": "2025-12-08",
+        "nav": 28870.0
+      },
+      {
+        "month": "2025-12-22",
+        "nav": 28992.0
+      },
+      {
+        "month": "2026-01-05",
+        "nav": 28565.0
+      },
+      {
+        "month": "2026-01-19",
+        "nav": 29316.0
+      },
+      {
+        "month": "2026-02-02",
+        "nav": 28787.0
+      },
+      {
+        "month": "2026-02-16",
+        "nav": 28936.0
+      },
+      {
+        "month": "2026-03-02",
+        "nav": 28204.0
+      },
+      {
+        "month": "2026-03-16",
+        "nav": 26715.0
+      },
+      {
+        "month": "2026-03-30",
+        "nav": 29003.0
+      },
+      {
+        "month": "2026-04-13",
+        "nav": 30232.0
+      },
+      {
+        "month": "2026-04-27",
+        "nav": 30232.0
+      }
+    ],
+    "final_nav": 30232.0
+  }
+}

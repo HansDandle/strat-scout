@@ -180,8 +180,15 @@
 
     /* ── Proof block ── */
     .proof-grid {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
       gap: 1.25rem;
+    }
+    .proof-grid-bottom {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+      margin-top: 1.25rem;
     }
     .proof-card {
       background: var(--surface); border: 1px solid var(--border);
@@ -259,6 +266,7 @@
     <li><a href="#results">Results</a></li>
     <li><a href="#regimes">Regimes</a></li>
     <li><a href="research.html">Research Journey</a></li>
+    <li><a href="simulator.html">Simulator</a></li>
   </ul>
   <a href="#waitlist" class="nav-cta">Join waitlist</a>
 </nav>
@@ -453,20 +461,30 @@
 
   <div class="proof-grid">
     <div class="proof-card">
-      <div class="num">$215k</div>
-      <div class="label">Median NAV — Random Trials (10 runs)</div>
+      <div class="num">16x</div>
+      <div class="label">vs SPY buy-and-hold (HoF Seeded)</div>
     </div>
     <div class="proof-card">
-      <div class="num">$115k</div>
-      <div class="label">Median NAV — Random Universe (10 runs)</div>
+      <div class="num">59%</div>
+      <div class="label">Active trade win rate</div>
     </div>
     <div class="proof-card">
-      <div class="num">$34.8k</div>
-      <div class="label">SPY buy-and-hold, same period</div>
+      <div class="num">14,000+</div>
+      <div class="label">Optimizer trials per period</div>
+    </div>
+  </div>
+  <div class="proof-grid-bottom">
+    <div class="proof-card">
+      <div class="num">220</div>
+      <div class="label">Out-of-sample periods per run</div>
     </div>
     <div class="proof-card">
-      <div class="num">1.14</div>
-      <div class="label">Median Calmar — Random Trials</div>
+      <div class="num">0</div>
+      <div class="label">Parameters fit to future data</div>
+    </div>
+    <div class="proof-card">
+      <div class="num">14 days</div>
+      <div class="label">Re-optimizes automatically</div>
     </div>
   </div>
 
@@ -490,18 +508,15 @@
           <td>0.92</td>
         </tr>
         <tr>
-          <td>Random Trials</td>
+          <td>Curated Universe</td>
           <td class="positive">$214,897</td>
           <td class="positive">+44.4%</td>
           <td class="negative">37.4%</td>
           <td>1.14</td>
         </tr>
         <tr class="highlight">
-          <td>HoF Seeded</td>
-          <td style="color:var(--muted);font-style:italic;">in progress</td>
-          <td style="color:var(--muted);font-style:italic;">—</td>
-          <td style="color:var(--muted);font-style:italic;">—</td>
-          <td style="color:var(--muted);font-style:italic;">—</td>
+          <td>Curated + HoF Seeded</td>
+          <td>$555,098</td><td>+61.0%</td><td>29.5%</td><td>2.15</td>
         </tr>
         <tr>
           <td>SPY buy-and-hold</td>

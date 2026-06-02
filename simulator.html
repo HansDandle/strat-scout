@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Strategy Simulator — StratScout</title>
+  <style>
+    :root {
+      --bg: #0d0d0f;
+      --surface: #141418;
+      --border: #2a2a35;
+      --text: #e8e8f0;
+      --muted: #8888a0;
+      --green: #22c55e;
+      --red: #ef4444;
+      --gold: #f59e0b;
+      --blue: #3b82f6;
+      --purple: #a855f7;
+      --accent: #6366f1;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--bg); color: var(--text); font-family: 'Inter', system-ui, sans-serif; min-height: 100vh; }
+
+    nav {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 2rem; height: 60px; border-bottom: 1px solid var(--border);
+      background: var(--surface);
+    }
+    .nav-logo { font-weight: 700; font-size: 1.1rem; color: var(--text); text-decoration: none; }
+    .nav-links { display: flex; gap: 1.5rem; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--text); }
+
+    .page-header {
+      padding: 2.5rem 2rem 1rem;
+      max-width: 1100px; margin: 0 auto;
+    }
+    .page-header h1 { font-size: 1.8rem; font-weight: 700; }
+    .page-header p { color: var(--muted); margin-top: 0.4rem; font-size: 0.95rem; }
+
+    .controls {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 10px;
+      padding: 1.2rem 1.5rem; max-width: 1100px; margin: 0 auto 1.5rem;
+      display: flex; gap: 1.5rem; align-items: flex-end; flex-wrap: wrap;
+    }
+    .ctrl-group { display: flex; flex-direction: column; gap: 0.4rem; }
+    .ctrl-group label { font-size: 0.78rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; }
+    .ctrl-group input, .ctrl-group select {
+      background: var(--bg); border: 1px solid var(--border); border-radius: 6px;
+      color: var(--text); padding: 0.45rem 0.75rem; font-size: 0.9rem;
+    }
+    .ctrl-group input[type=range] {
+      padding: 0; width: 120px; accent-color: var(--accent);
+    }
+    .speed-label { font-size: 0.9rem; color: var(--text); min-width: 2.5rem; }
+    .btn {
+      padding: 0.5rem 1.5rem; border-radius: 6px; border: none; cursor: pointer;
+      font-size: 0.9rem; font-weight: 600; transition: all 0.2s;
+    }
+    .btn-primary { background: var(--accent); color: #fff; }
+    .btn-primary:hover { background: #5254e8; }
+    .btn-secondary { background: var(--border); color: var(--text); }
+    .btn-secondary:hover { background: #3a3a50; }
+
+    .sim-layout {
+      max-width: 1100px; margin: 0 auto 2rem;
+      display: grid; grid-template-columns: 1fr 220px; gap: 1rem;
+    }
+    @media (max-width: 768px) {
+      .sim-layout { grid-template-columns: 1fr; }
+    }
+
+    .chart-panel {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 10px;
+      padding: 1rem; position: relative;
+    }
+    canvas { width: 100%; display: block; }
+
+    .sidebar {
+      display: flex; flex-direction: column; gap: 1rem;
+    }
+    .stat-card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 10px;
+      padding: 1rem 1.2rem;
+    }
+    .stat-card .label { font-size: 0.75rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.3rem; }
+    .stat-card .value { font-size: 1.6rem; font-weight: 700; }
+    .stat-card .sub { font-size: 0.8rem; color: var(--muted); margin-top: 0.2rem; }
+
+    .regime-pill {
+      display: inline-block; padding: 0.25rem 0.75rem; border-radius: 99px;
+      font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em;
+    }
+    .regime-risk_on { background: rgba(34,197,94,0.15); color: var(--green); border: 1px solid rgba(34,197,94,0.3); }
+    .regime-risk_off_rising { background: rgba(239,68,68,0.15); color: var(--red); border: 1px solid rgba(239,68,68,0.3); }
+    .regime-risk_off_falling { background: rgba(168,85,247,0.15); color: var(--purple); border: 1px solid rgba(168,85,247,0.3); }
+
+    .holdings-list { list-style: none; margin-top: 0.5rem; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+    .holdings-list li {
+      background: rgba(99,102,241,0.12); color: var(--accent); border: 1px solid rgba(99,102,241,0.25);
+      border-radius: 4px; padding: 0.2rem 0.5rem; font-size: 0.8rem; font-weight: 600;
+    }
+
+    .progress-bar {
+      height: 3px; background: var(--border); border-radius: 2px; margin: 0.75rem 0 0;
+    }
+    .progress-fill { height: 100%; background: var(--accent); border-radius: 2px; transition: width 0.1s; }
+
+    .trade-log-section {
+      max-width: 1100px; margin: 0 auto 3rem;
+    }
+    .trade-log-section h3 { font-size: 0.9rem; color: var(--muted); margin-bottom: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; }
+    .trade-log {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 10px;
+      height: 220px; overflow-y: auto; font-family: 'JetBrains Mono', 'Fira Code', monospace;
+      font-size: 0.78rem;
+    }
+    .log-row {
+      display: grid; grid-template-columns: 110px 140px 1fr 70px;
+      padding: 0.4rem 1rem; border-bottom: 1px solid rgba(255,255,255,0.04);
+      align-items: center;
+    }
+    .log-row:last-child { border-bottom: none; }
+    .log-row .date { color: var(--muted); }
+    .log-row .ret-pos { color: var(--green); font-weight: 600; }
+    .log-row .ret-neg { color: var(--red); font-weight: 600; }
+    .log-header { color: var(--muted); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.06em; }
+
+    .final-card {
+      display: none; max-width: 1100px; margin: 0 auto 2rem;
+      background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
+      padding: 2rem; text-align: center;
+    }
+    .final-card h2 { font-size: 1.4rem; margin-bottom: 1.5rem; }
+    .final-stats { display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; }
+    .final-stat .num { font-size: 2rem; font-weight: 800; }
+    .final-stat .lbl { font-size: 0.8rem; color: var(--muted); margin-top: 0.3rem; }
+    .final-stat.good .num { color: var(--green); }
+    .final-stat.bad .num { color: var(--red); }
+    .final-stat.neutral .num { color: var(--text); }
+
+    footer { border-top: 1px solid var(--border); padding: 1.5rem 2rem; text-align: center; color: var(--muted); font-size: 0.8rem; }
+    footer a { color: var(--muted); }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">StratScout</a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="research.html">Research</a>
+    <a href="simulator.html" class="active">Simulator</a>
+  </div>
+</nav>
+
+<div class="page-header">
+  <h1>Fast-Forward Simulator</h1>
+  <p>Watch the walk-forward strategy replay period by period from 2018 to present. Starting capital compounds through 220 out-of-sample periods.</p>
+</div>
+
+<div class="controls">
+  <div class="ctrl-group">
+    <label>Starting Capital</label>
+    <input type="number" id="startAmt" value="10000" min="1000" max="10000000" step="1000" />
+  </div>
+  <div class="ctrl-group">
+    <label>Strategy</label>
+    <select id="configSel">
+      <option value="random_trials">Random Trials</option>
+      <option value="hof_seeded" selected>HoF Seeded</option>
+    </select>
+  </div>
+  <div class="ctrl-group">
+    <label>Speed</label>
+    <div style="display:flex;align-items:center;gap:0.5rem">
+      <input type="range" id="speedSlider" min="0" max="2" step="1" value="1" />
+      <span class="speed-label" id="speedLabel">5x</span>
+    </div>
+  </div>
+  <div style="display:flex;gap:0.5rem">
+    <button class="btn btn-primary" id="playBtn">Play</button>
+    <button class="btn btn-secondary" id="resetBtn">Reset</button>
+  </div>
+</div>
+
+<div class="sim-layout">
+  <div class="chart-panel">
+    <canvas id="chart" height="340"></canvas>
+    <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+    <div style="display:flex;justify-content:space-between;margin-top:0.4rem;font-size:0.72rem;color:var(--muted)">
+      <span id="dateLabel">—</span>
+      <span id="periodLabel">0 / 0 periods</span>
+    </div>
+  </div>
+  <div class="sidebar">
+    <div class="stat-card">
+      <div class="label">Portfolio Value</div>
+      <div class="value" id="navDisplay">$10,000</div>
+      <div class="sub" id="returnDisplay">+0.0%</div>
+    </div>
+    <div class="stat-card">
+      <div class="label">Regime</div>
+      <div id="regimeDisplay"><span class="regime-pill regime-risk_on">Risk-On</span></div>
+    </div>
+    <div class="stat-card">
+      <div class="label">Holdings</div>
+      <ul class="holdings-list" id="holdingsList"><li>—</li></ul>
+    </div>
+    <div class="stat-card" style="font-size:0.8rem;color:var(--muted);line-height:1.6">
+      Period return shown is the 14-day out-of-sample result for each optimizer run.
+    </div>
+  </div>
+</div>
+
+<div class="trade-log-section">
+  <h3>Period Log</h3>
+  <div class="trade-log">
+    <div class="log-row log-header">
+      <span>Date</span><span>Regime</span><span>Holdings</span><span>Return</span>
+    </div>
+    <div id="logBody"></div>
+  </div>
+</div>
+
+<div class="final-card" id="finalCard">
+  <h2>Run Complete</h2>
+  <div class="final-stats" id="finalStats"></div>
+</div>
+
+<footer>
+  <p>Walk-forward validated. No future data. &copy; 2026 StratScout &nbsp;|&nbsp; <a href="index.html">Home</a></p>
+</footer>
+
+<script>
+const SPEEDS = [500, 100, 25];
+const SPEED_LABELS = ["1x", "5x", "20x"];
+
+let data = null;
+let state = {
+  config: "hof_seeded",
+  startAmt: 10000,
+  idx: 0,
+  playing: false,
+  timer: null,
+  navHistory: [],
+  spyHistory: [],
+};
+
+// Load data
+fetch("docs/simulator_data.json")
+  .then(r => r.json())
+  .then(d => { data = d; updateDisplay(); });
+
+// Controls
+document.getElementById("speedSlider").addEventListener("input", e => {
+  document.getElementById("speedLabel").textContent = SPEED_LABELS[+e.target.value];
+  if (state.playing) { clearInterval(state.timer); startTimer(); }
+});
+document.getElementById("configSel").addEventListener("change", e => { reset(); });
+document.getElementById("startAmt").addEventListener("change", e => { reset(); });
+document.getElementById("playBtn").addEventListener("click", togglePlay);
+document.getElementById("resetBtn").addEventListener("click", reset);
+
+function togglePlay() {
+  if (state.playing) {
+    state.playing = false;
+    clearInterval(state.timer);
+    document.getElementById("playBtn").textContent = "Play";
+  } else {
+    state.playing = true;
+    document.getElementById("playBtn").textContent = "Pause";
+    startTimer();
+  }
+}
+
+function startTimer() {
+  const speed = SPEEDS[+document.getElementById("speedSlider").value];
+  state.timer = setInterval(step, speed);
+}
+
+function reset() {
+  state.playing = false;
+  clearInterval(state.timer);
+  document.getElementById("playBtn").textContent = "Play";
+  state.config = document.getElementById("configSel").value;
+  state.startAmt = Math.max(1, +document.getElementById("startAmt").value || 10000);
+  state.idx = 0;
+  state.navHistory = [];
+  state.spyHistory = [];
+  document.getElementById("logBody").innerHTML = "";
+  document.getElementById("finalCard").style.display = "none";
+  updateDisplay();
+  drawChart();
+}
+
+function step() {
+  if (!data) return;
+  const periods = data[state.config].periods;
+  if (state.idx >= periods.length) {
+    state.playing = false;
+    clearInterval(state.timer);
+    document.getElementById("playBtn").textContent = "Play";
+    showFinal();
+    return;
+  }
+  const p = periods[state.idx];
+  const scale = state.startAmt / 10000;
+  const nav = p.nav * scale;
+  const spyNav = p.spy_nav * scale;
+  state.navHistory.push(nav);
+  state.spyHistory.push(spyNav);
+  state.idx++;
+  updateDisplay();
+  drawChart();
+  appendLog(p, nav, scale);
+}
+
+function updateDisplay() {
+  if (!data) return;
+  const periods = data[state.config].periods;
+  const scale = state.startAmt / 10000;
+  const i = Math.max(0, state.idx - 1);
+  const p = periods[i] || periods[0];
+
+  const nav = state.navHistory.length ? state.navHistory[state.navHistory.length - 1] : state.startAmt;
+  const totalRet = ((nav / state.startAmt) - 1) * 100;
+
+  document.getElementById("navDisplay").textContent = "$" + Math.round(nav).toLocaleString();
+  document.getElementById("returnDisplay").textContent =
+    (totalRet >= 0 ? "+" : "") + totalRet.toFixed(1) + "% total return";
+  document.getElementById("returnDisplay").style.color = totalRet >= 0 ? "var(--green)" : "var(--red)";
+
+  const regime = p.regime || "risk_on";
+  const regimeLabel = { risk_on: "Risk-On", risk_off_rising: "Risk-Off Rising", risk_off_falling: "Risk-Off Falling" }[regime] || regime;
+  document.getElementById("regimeDisplay").innerHTML =
+    `<span class="regime-pill regime-${regime}">${regimeLabel}</span>`;
+
+  const holdings = p.holdings || [];
+  document.getElementById("holdingsList").innerHTML =
+    holdings.length ? holdings.map(h => `<li>${h}</li>`).join("") : "<li>Cash</li>";
+
+  document.getElementById("dateLabel").textContent = p.month || "—";
+  document.getElementById("periodLabel").textContent = `${state.idx} / ${periods.length} periods`;
+  document.getElementById("progressFill").style.width = (state.idx / periods.length * 100) + "%";
+}
+
+function appendLog(p, nav, scale) {
+  const regime = p.regime || "risk_on";
+  const regimeLabel = { risk_on: "Risk-On", risk_off_rising: "Risk-Off Rising", risk_off_falling: "Risk-Off Falling" }[regime] || regime;
+  const holdings = (p.holdings || []).join(", ") || "Cash";
+  const retCls = p.ret >= 0 ? "ret-pos" : "ret-neg";
+  const retStr = (p.ret >= 0 ? "+" : "") + p.ret.toFixed(2) + "%";
+
+  const row = document.createElement("div");
+  row.className = "log-row";
+  row.innerHTML = `<span class="date">${p.month}</span><span>${regimeLabel}</span><span>${holdings}</span><span class="${retCls}">${retStr}</span>`;
+  const logBody = document.getElementById("logBody");
+  logBody.appendChild(row);
+  logBody.scrollTop = logBody.scrollHeight;
+}
+
+function drawChart() {
+  const canvas = document.getElementById("chart");
+  const dpr = window.devicePixelRatio || 1;
+  const W = canvas.parentElement.clientWidth - 32;
+  const H = 340;
+  canvas.width = W * dpr;
+  canvas.height = H * dpr;
+  canvas.style.width = W + "px";
+  canvas.style.height = H + "px";
+
+  const ctx = canvas.getContext("2d");
+  ctx.scale(dpr, dpr);
+  ctx.clearRect(0, 0, W, H);
+
+  const pad = { top: 20, right: 20, bottom: 30, left: 70 };
+  const cw = W - pad.left - pad.right;
+  const ch = H - pad.top - pad.bottom;
+
+  const navH = state.navHistory;
+  const spyH = state.spyHistory;
+
+  if (navH.length < 2) {
+    ctx.fillStyle = "#444";
+    ctx.font = "13px system-ui";
+    ctx.textAlign = "center";
+    ctx.fillText("Press Play to start simulation", W / 2, H / 2);
+    return;
+  }
+
+  const allVals = [...navH, ...spyH];
+  const minV = Math.min(...allVals) * 0.9;
+  const maxV = Math.max(...allVals) * 1.05;
+  const total = (data[state.config].periods.length || navH.length);
+
+  function xOf(i) { return pad.left + (i / (total - 1)) * cw; }
+  function yOf(v) { return pad.top + (1 - (v - minV) / (maxV - minV)) * ch; }
+
+  // Grid lines
+  ctx.strokeStyle = "rgba(255,255,255,0.05)";
+  ctx.lineWidth = 1;
+  for (let i = 0; i <= 4; i++) {
+    const y = pad.top + (ch / 4) * i;
+    ctx.beginPath(); ctx.moveTo(pad.left, y); ctx.lineTo(pad.left + cw, y); ctx.stroke();
+    const val = maxV - (maxV - minV) * (i / 4);
+    ctx.fillStyle = "#555";
+    ctx.font = "10px system-ui";
+    ctx.textAlign = "right";
+    ctx.fillText("$" + (val >= 1e6 ? (val / 1e6).toFixed(1) + "M" : Math.round(val / 1000) + "k"), pad.left - 6, y + 4);
+  }
+
+  // SPY line (dashed)
+  if (spyH.length >= 2) {
+    ctx.strokeStyle = "rgba(139,139,160,0.5)";
+    ctx.lineWidth = 1.5;
+    ctx.setLineDash([4, 4]);
+    ctx.beginPath();
+    spyH.forEach((v, i) => { i === 0 ? ctx.moveTo(xOf(i), yOf(v)) : ctx.lineTo(xOf(i), yOf(v)); });
+    ctx.stroke();
+    ctx.setLineDash([]);
+  }
+
+  // Strategy line
+  const gradient = ctx.createLinearGradient(0, pad.top, 0, pad.top + ch);
+  gradient.addColorStop(0, "rgba(99,102,241,0.8)");
+  gradient.addColorStop(1, "rgba(99,102,241,0.1)");
+
+  ctx.strokeStyle = "#6366f1";
+  ctx.lineWidth = 2;
+  ctx.beginPath();
+  navH.forEach((v, i) => { i === 0 ? ctx.moveTo(xOf(i), yOf(v)) : ctx.lineTo(xOf(i), yOf(v)); });
+  ctx.stroke();
+
+  // Fill under strategy
+  ctx.fillStyle = "rgba(99,102,241,0.08)";
+  ctx.beginPath();
+  navH.forEach((v, i) => { i === 0 ? ctx.moveTo(xOf(i), yOf(v)) : ctx.lineTo(xOf(i), yOf(v)); });
+  ctx.lineTo(xOf(navH.length - 1), yOf(minV));
+  ctx.lineTo(xOf(0), yOf(minV));
+  ctx.closePath();
+  ctx.fill();
+
+  // Dot at end
+  const lx = xOf(navH.length - 1), ly = yOf(navH[navH.length - 1]);
+  ctx.fillStyle = "#6366f1";
+  ctx.beginPath(); ctx.arc(lx, ly, 4, 0, Math.PI * 2); ctx.fill();
+
+  // Legend
+  ctx.font = "11px system-ui";
+  ctx.fillStyle = "#6366f1"; ctx.textAlign = "left";
+  ctx.fillText("Strategy", pad.left + 8, pad.top + 14);
+  ctx.strokeStyle = "rgba(139,139,160,0.5)"; ctx.setLineDash([4,4]); ctx.lineWidth = 1.5;
+  ctx.beginPath(); ctx.moveTo(pad.left + 76, pad.top + 10); ctx.lineTo(pad.left + 94, pad.top + 10); ctx.stroke();
+  ctx.setLineDash([]);
+  ctx.fillStyle = "rgba(139,139,160,0.7)"; ctx.fillText("SPY", pad.left + 97, pad.top + 14);
+}
+
+function showFinal() {
+  if (!data) return;
+  const scale = state.startAmt / 10000;
+  const run = data[state.config];
+  const spy = data.spy;
+  const nav = state.navHistory[state.navHistory.length - 1];
+  const spyNav = state.spyHistory[state.spyHistory.length - 1];
+  const periods = run.periods.length;
+  const years = periods * 14 / 365.25;
+  const cagr = (Math.pow(nav / state.startAmt, 1 / years) - 1) * 100;
+  const maxDD = run.max_dd;
+  const multiple = nav / spyNav;
+
+  document.getElementById("finalStats").innerHTML = `
+    <div class="final-stat good"><div class="num">$${Math.round(nav).toLocaleString()}</div><div class="lbl">Final Portfolio</div></div>
+    <div class="final-stat good"><div class="num">+${cagr.toFixed(1)}%</div><div class="lbl">CAGR</div></div>
+    <div class="final-stat bad"><div class="num">${maxDD.toFixed(1)}%</div><div class="lbl">Max Drawdown</div></div>
+    <div class="final-stat neutral"><div class="num">${multiple.toFixed(1)}x</div><div class="lbl">vs SPY</div></div>
+  `;
+  document.getElementById("finalCard").style.display = "block";
+  document.getElementById("finalCard").scrollIntoView({ behavior: "smooth", block: "nearest" });
+}
+
+// Initial chart placeholder
+window.addEventListener("load", () => { drawChart(); });
+window.addEventListener("resize", () => { drawChart(); });
+</script>
+</body>
+</html>
