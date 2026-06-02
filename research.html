@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Research Journey - StratScout</title>
+  <meta name="description" content="How StratScout was built: walk-forward methodology, what we tried, what failed, and what survived honest out-of-sample testing." />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0d0f12; --surface: #151820; --border: #1e2330;
+      --accent: #3b82f6; --accent-dim: #1d4ed8;
+      --green: #22c55e; --red: #ef4444; --yellow: #f59e0b;
+      --text: #e2e8f0; --muted: #64748b;
+      --mono: 'JetBrains Mono', 'Fira Mono', monospace;
+    }
+    body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.7; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(13,15,18,0.92); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 56px;
+    }
+    .logo { font-weight: 700; font-size: 1.1rem; letter-spacing: -0.02em; }
+    .logo span { color: var(--accent); }
+    nav ul { list-style: none; display: flex; gap: 2rem; }
+    nav ul a { color: var(--muted); font-size: 0.9rem; }
+    nav ul a:hover, nav ul a.active { color: var(--text); text-decoration: none; }
+    .nav-cta { background: var(--accent); color: #fff; padding: 0.4rem 1rem; border-radius: 6px; font-size: 0.85rem; font-weight: 600; }
+    .nav-cta:hover { background: var(--accent-dim); text-decoration: none; }
+
+    .hero { max-width: 820px; margin: 0 auto; padding: 4rem 2rem 2rem; }
+    .hero-tag { display: inline-block; background: rgba(59,130,246,0.12); color: var(--accent); border: 1px solid rgba(59,130,246,0.3); border-radius: 100px; padding: 0.25rem 0.85rem; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 1.25rem; }
+    h1 { font-size: clamp(1.9rem, 4vw, 2.75rem); font-weight: 800; letter-spacing: -0.03em; line-height: 1.15; margin-bottom: 1rem; }
+    .hero p { color: var(--muted); font-size: 1.05rem; max-width: 640px; }
+
+    .toc { max-width: 820px; margin: 2rem auto 0; padding: 0 2rem; }
+    .toc-inner { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1.25rem 1.5rem; display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; }
+    .toc-inner a { font-size: 0.85rem; color: var(--muted); }
+    .toc-inner a:hover { color: var(--text); }
+
+    .content { max-width: 820px; margin: 0 auto; padding: 0 2rem 5rem; }
+    .chapter { margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--border); }
+    .chapter-num { font-size: 0.72rem; font-weight: 700; color: var(--accent); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.5rem; }
+    h2 { font-size: 1.6rem; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 0.75rem; }
+    h3 { font-size: 1.05rem; font-weight: 700; margin: 1.75rem 0 0.5rem; color: var(--text); }
+    p { color: var(--muted); margin-bottom: 1rem; }
+    p strong { color: var(--text); }
+
+    .chart-wrap { margin: 1.75rem 0; border-radius: 12px; overflow: hidden; border: 1px solid var(--border); }
+    .chart-wrap img { width: 100%; display: block; }
+    .chart-caption { background: var(--surface); padding: 0.6rem 1rem; font-size: 0.78rem; color: var(--muted); }
+
+    .result-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; margin: 1.5rem 0; }
+    .result-cell { background: var(--surface); padding: 1.1rem 1rem; text-align: center; }
+    .result-val { font-size: 1.5rem; font-weight: 800; font-family: var(--mono); letter-spacing: -0.02em; }
+    .result-val.green { color: var(--green); }
+    .result-val.red { color: var(--red); }
+    .result-val.accent { color: var(--accent); }
+    .result-label { font-size: 0.73rem; color: var(--muted); margin-top: 0.25rem; text-transform: uppercase; letter-spacing: 0.06em; }
+
+    .killed { background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--red); border-radius: 8px; padding: 1rem 1.25rem; margin: 1rem 0; }
+    .killed-title { font-weight: 700; color: var(--text); font-size: 0.9rem; margin-bottom: 0.3rem; }
+    .killed p { margin: 0; font-size: 0.88rem; }
+
+    .insight { background: rgba(59,130,246,0.06); border: 1px solid rgba(59,130,246,0.2); border-radius: 8px; padding: 1rem 1.25rem; margin: 1.25rem 0; }
+    .insight-label { font-size: 0.7rem; font-weight: 700; color: var(--accent); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.35rem; }
+    .insight p { margin: 0; font-size: 0.9rem; color: var(--text); }
+
+    table { width: 100%; border-collapse: collapse; font-size: 0.85rem; margin: 1.25rem 0; }
+    thead th { text-align: left; padding: 0.55rem 0.9rem; background: var(--surface); color: var(--muted); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; border-bottom: 1px solid var(--border); }
+    tbody td { padding: 0.6rem 0.9rem; border-bottom: 1px solid var(--border); font-family: var(--mono); font-size: 0.82rem; }
+    tbody tr:hover td { background: rgba(255,255,255,0.02); }
+    .pos { color: var(--green); } .neg { color: var(--red); }
+    .hl td { background: rgba(59,130,246,0.06) !important; font-weight: 700; }
+
+    footer { border-top: 1px solid var(--border); padding: 2rem; text-align: center; font-size: 0.8rem; color: var(--muted); }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo">Strat<span>Scout</span></a>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="research.html" class="active">Research Journey</a></li>
+  </ul>
+  <a href="index.html#waitlist" class="nav-cta">Join waitlist</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-tag">Methodology and Research</div>
+  <h1>How StratScout was built</h1>
+  <p>Every result on this site is fully out-of-sample. This page documents the research process: what we tried, what failed, what survived, and why we trust the numbers.</p>
+</div>
+
+<div class="toc">
+  <div class="toc-inner">
+    <a href="#methodology">The methodology</a>
+    <a href="#baseline">Baseline results</a>
+    <a href="#robustness">Robustness check</a>
+    <a href="#drawdown">Reducing drawdown</a>
+    <a href="#pool">Pool expansion</a>
+    <a href="#killed">What we killed</a>
+    <a href="#hof">HoF seeding</a>
+    <a href="#live">Going live</a>
+  </div>
+</div>
+
+<div class="content">
+
+  <div class="chapter" id="methodology">
+    <div class="chapter-num">Chapter 1</div>
+    <h2>The walk-forward methodology</h2>
+    <p>The core problem with most backtests: the researcher sees all the data, then fits parameters to it. The result looks good on paper but fails live because the optimizer learned noise, not signal.</p>
+    <p>StratScout uses <strong>walk-forward validation</strong> to prevent this. Every 14 days, the optimizer trains on the trailing 12 months of data split across 3 sub-windows for overfit resistance, then deploys those parameters for exactly one period. The next period, it trains again from scratch on fresh data. No parameter ever sees the period it will trade.</p>
+    <p>The result is a long chain of independent out-of-sample bets. The equity curve you see is what actually would have happened.</p>
+
+    <h3>Regime detection</h3>
+    <p>Before picking ETFs, the system classifies the current market regime using two ratio signals:</p>
+    <ul style="color:var(--muted);padding-left:1.5rem;margin-bottom:1rem;line-height:2;">
+      <li><strong style="color:var(--text);">AGG vs BIL</strong> — if bonds outperform cash over 90 days: <strong style="color:var(--green);">Risk-On</strong>. Rotate into leveraged equity ETFs.</li>
+      <li><strong style="color:var(--text);">TLT vs BIL</strong> (when risk-off) — if long treasuries underperform cash: <strong style="color:var(--red);">Risk-Off Rising Rates</strong>. Hold cash or inverse ETFs.</li>
+      <li><strong style="color:var(--text);">Otherwise</strong> — <strong style="color:var(--accent);">Risk-Off Falling Rates</strong>. Rotate into gold, managed futures, tail-risk hedges.</li>
+    </ul>
+
+    <div class="chart-wrap">
+      <img src="docs/img/regime_breakdown.png" alt="Regime distribution 2018-present" />
+      <div class="chart-caption">Regime distribution across 220 periods (2018-present). Risk-on dominates at 62%, which is why leveraged equity ETF selection matters most.</div>
+    </div>
+
+    <div class="insight">
+      <div class="insight-label">Key insight</div>
+      <p>The regime signal is the alpha. ETF selection within a regime matters less than getting the regime right. We proved this by running the same system with a randomly sampled ETF pool - performance dropped but did not collapse.</p>
+    </div>
+  </div>
+
+  <div class="chapter" id="baseline">
+    <div class="chapter-num">Chapter 2</div>
+    <h2>Baseline results</h2>
+    <p>The first full run used a hand-curated universe of ~20 ETFs selected for regime fit. We ran 10 independent seeds to measure variance. Each seed uses different random trial sequences, producing genuinely different equity curves.</p>
+
+    <div class="chart-wrap">
+      <img src="docs/img/equity_curves.png" alt="Equity curves - all runs" />
+      <div class="chart-caption">66 independent runs, 2018-present, log scale. Each line is a separate optimizer seed. Median in blue, SPY buy-and-hold dashed. Includes all subsequent experiments.</div>
+    </div>
+
+    <div class="result-grid">
+      <div class="result-cell"><div class="result-val green">$183k</div><div class="result-label">Mean NAV (10 runs)</div></div>
+      <div class="result-cell"><div class="result-val green">37.6%</div><div class="result-label">Mean CAGR</div></div>
+      <div class="result-cell"><div class="result-val red">40.4%</div><div class="result-label">Mean Max DD</div></div>
+      <div class="result-cell"><div class="result-val accent">1.04</div><div class="result-label">Mean Calmar</div></div>
+    </div>
+
+    <p>The wide spread across runs is expected and honest. Random search does not always find the same params, and some seeds navigate 2020-2021 better than others. The median tells the real story.</p>
+  </div>
+
+  <div class="chapter" id="robustness">
+    <div class="chapter-num">Chapter 3</div>
+    <h2>Robustness check: does ETF selection matter?</h2>
+    <p>A reasonable objection: maybe the results are just curve-fitting to specific ETFs. To test this, we ran the exact same system but randomly sampled the ETF pool from a 47-symbol universe each period. If the strategy only worked because we hand-picked the right ETFs, this should collapse.</p>
+
+    <table>
+      <thead><tr><th>Configuration</th><th>Mean NAV</th><th>Mean CAGR</th><th>Mean Calmar</th></tr></thead>
+      <tbody>
+        <tr><td>Curated universe</td><td class="pos">$182,940</td><td class="pos">+37.6%</td><td>1.04</td></tr>
+        <tr><td>Random universe (10 runs)</td><td class="pos">$114,700</td><td class="pos">+31.1%</td><td>0.92</td></tr>
+      </tbody>
+    </table>
+
+    <div class="insight">
+      <div class="insight-label">Finding</div>
+      <p>Performance drops when you randomize the universe but does not collapse. The regime gate is doing real work. Curated ETF selection adds value, but the signal is not purely about which ETFs you pick.</p>
+    </div>
+  </div>
+
+  <div class="chapter" id="drawdown">
+    <div class="chapter-num">Chapter 4</div>
+    <h2>Reducing drawdown</h2>
+    <p>The baseline had a 40% mean max drawdown. We introduced <strong>lev_3x_cap</strong>: a parameter capping total portfolio weight in 3x leveraged ETFs. Rather than fixing it, we let the optimizer choose from a range and see where it converged.</p>
+    <p>The optimizer consistently chose ~0.60, capping 3x leverage at 60% of the portfolio. Mean max drawdown dropped from 40% to 37% with no CAGR penalty.</p>
+
+    <div class="chart-wrap">
+      <img src="docs/img/drawdown.png" alt="Equity and drawdown" />
+      <div class="chart-caption">Equity curve (top) and drawdown panel (bottom) across all 66 runs. Worst drawdowns cluster around COVID (2020) and the 2022 rate shock.</div>
+    </div>
+  </div>
+
+  <div class="chapter" id="pool">
+    <div class="chapter-num">Chapter 5</div>
+    <h2>Pool expansion - the breakthrough</h2>
+    <p>The risk-off rising regime was a persistent weak spot. Inverse ETFs like QID and SQQQ decay over time - holding them for a full 14-day period in choppy rising-rate conditions consistently lost money. The fix was obvious in hindsight: add <strong>BIL</strong> (cash) as a valid option in that regime and let the optimizer decide.</p>
+    <p>We also added managed futures (KMLM, DBMF) and a tail-risk hedge (TAIL) to the risk-off falling pool, targeting periods where equity correlations spike toward 1.</p>
+
+    <table>
+      <thead><tr><th>Experiment</th><th>Mean NAV</th><th>Mean CAGR</th><th>Mean Max DD</th><th>Calmar</th></tr></thead>
+      <tbody>
+        <tr><td>Levcap baseline</td><td>$186,364</td><td class="pos">+36.6%</td><td class="neg">37.0%</td><td>1.02</td></tr>
+        <tr class="hl"><td>Pool expansion</td><td class="pos">$230,988</td><td class="pos">+41.2%</td><td class="neg">35.1%</td><td>1.27</td></tr>
+      </tbody>
+    </table>
+
+    <div class="insight">
+      <div class="insight-label">Finding</div>
+      <p>BIL was selected in 145 of 218 risk-off rising periods (66% of the time). Cash beat every inverse ETF in that regime. Simply having cash as an option was worth +$44k mean NAV and -1.9pp max drawdown.</p>
+    </div>
+  </div>
+
+  <div class="chapter" id="killed">
+    <div class="chapter-num">Chapter 6</div>
+    <h2>What we tried and killed</h2>
+    <p>Showing only what worked would be dishonest. These are the experiments that looked promising and failed.</p>
+
+    <div class="killed">
+      <div class="killed-title">X &nbsp; Zany signals - moon phase, Nikkei trigger, SPY/TLT correlation</div>
+      <p>Added 6 alternative signals as extra optimizer inputs. They hurt CAGR by 21 percentage points versus the clean baseline. Fully removed from the codebase, not just disabled.</p>
+    </div>
+
+    <div class="killed">
+      <div class="killed-title">X &nbsp; Volatility targeting</div>
+      <p>Scale position size down when realized vol is high. In practice it reduced CAGR without meaningfully reducing drawdown. The system was selling into volatility spikes that often reversed quickly.</p>
+    </div>
+
+    <div class="killed">
+      <div class="killed-title">X &nbsp; Elastic martingale trial scaling</div>
+      <p>Double optimizer trials after a losing period, quadruple after two consecutive losses. In practice it overfit in extended choppy regimes, spending 1200 trials on periods the market made unwinnable regardless of params.</p>
+    </div>
+
+    <div class="killed">
+      <div class="killed-title">X &nbsp; Train score as a cash filter</div>
+      <p>Skip to cash when the optimizer confidence score falls below a threshold. We tested every threshold from 25 to 65. Train score is not predictive of out-of-sample success at any threshold. The filter just kills CAGR.</p>
+    </div>
+
+    <div class="chart-wrap">
+      <img src="docs/img/experiment_progression.png" alt="Experiment progression - Calmar ratio" />
+      <div class="chart-caption">Calmar ratio (CAGR / Max Drawdown) across experiments in research order. Higher is better. The random universe bar is a robustness check, not an attempted improvement.</div>
+    </div>
+  </div>
+
+  <div class="chapter" id="hof">
+    <div class="chapter-num">Chapter 7</div>
+    <h2>Hall of Fame seeding</h2>
+    <p>Every optimization period starts from scratch with pure random search. This is statistically clean but wasteful: we rediscover things the optimizer already learned in prior periods.</p>
+    <p>HoF seeding injects a small number of historically proven parameter sets as fixed trials at the start of each search. Seeds are selected by matching the current market regime using the actual AGG/BIL and TLT/BIL signals, filtered to only high-quality periods (val_return above 2%, Calmar above 0.8).</p>
+    <p>Seeds are strictly date-gated: a period can only be seeded from completed prior periods. No lookahead. Seeds count for only ~8% of total trials (25 out of 300), so random exploration still dominates.</p>
+
+    <div class="result-grid">
+      <div class="result-cell"><div class="result-val green">$33k</div><div class="result-label">HoF seeded median<br/><span style="font-size:0.65rem;">(2021-2023 hard window)</span></div></div>
+      <div class="result-cell"><div class="result-val red">$13k</div><div class="result-label">Baseline median<br/><span style="font-size:0.65rem;">(same window)</span></div></div>
+      <div class="result-cell"><div class="result-val green">1.21</div><div class="result-label">HoF Calmar</div></div>
+      <div class="result-cell"><div class="result-val red">0.32</div><div class="result-label">Baseline Calmar</div></div>
+    </div>
+
+    <p>2.6x higher median NAV and 3.8x better Calmar over the hardest 3-year window in the dataset. Full 2018-present comparison is currently running.</p>
+    <p><a href="docs/hof-explainer.md">Read the full HoF explainer including overfitting risk</a></p>
+  </div>
+
+  <div class="chapter" id="live">
+    <div class="chapter-num">Chapter 8</div>
+    <h2>Going live</h2>
+    <p>The strategy runs live in a Schwab Roth IRA. Every 14 days: download fresh data, run the optimizer on trailing 12 months, deploy the winning parameters for the next period. The live equity curve appends to the same walk-forward database, so backtested and live periods are directly comparable.</p>
+
+    <div class="chart-wrap">
+      <img src="docs/img/seasonality.png" alt="Seasonality - return and hit rate by month" />
+      <div class="chart-caption">Average return and hit rate by calendar month across all runs. March is the only net-negative month on average. February, August, and September show the strongest signal.</div>
+    </div>
+
+    <div class="chart-wrap">
+      <img src="docs/img/monthly_heatmap.png" alt="Monthly return heatmap" />
+      <div class="chart-caption">Per-period average return by calendar month and year. Green is positive, red is negative. The choppy 2021 and early-2023 periods are clearly visible.</div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <p><strong>StratScout</strong> &middot; strat-scout.com &middot; Not financial advice. All results are historical and out-of-sample. Past performance does not guarantee future results.</p>
+</footer>
+
+</body>
+</html>
