@@ -458,12 +458,39 @@
   <div class="waitlist-wrap">
     <h2>Get early access</h2>
     <p>StratScout is launching as a SaaS — hosted walk-forwards, live signals,<br />strategy inspector. Join the waitlist for early pricing.</p>
-    <form class="waitlist-form" action="https://formspree.io/f/xojbgnjo" method="POST">
-      <input type="hidden" name="_next" value="https://strat-scout.com/?thanks=1" />
-      <input type="email" name="email" placeholder="you@example.com" required />
-      <button type="submit">Join waitlist</button>
+    <form class="waitlist-form" id="waitlist-form">
+      <input type="email" name="email" id="waitlist-email" placeholder="you@example.com" required />
+      <button type="submit" id="waitlist-btn">Join waitlist</button>
     </form>
-    <p class="waitlist-note">No spam. Unsubscribe any time. Early members get lifetime discount.</p>
+    <p class="waitlist-note" id="waitlist-note">No spam. Unsubscribe any time. Early members get lifetime discount.</p>
+    <script>
+      document.getElementById('waitlist-form').addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const btn = document.getElementById('waitlist-btn');
+        const note = document.getElementById('waitlist-note');
+        btn.disabled = true;
+        btn.textContent = 'Sending...';
+        try {
+          const res = await fetch('https://formspree.io/f/xojbgnjo', {
+            method: 'POST',
+            headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email: document.getElementById('waitlist-email').value })
+          });
+          if (res.ok) {
+            this.innerHTML = '<p style="color:var(--green);font-weight:700;">You\'re on the list. We\'ll be in touch.</p>';
+            note.style.display = 'none';
+          } else {
+            btn.disabled = false;
+            btn.textContent = 'Join waitlist';
+            note.textContent = 'Something went wrong. Try again.';
+          }
+        } catch(_) {
+          btn.disabled = false;
+          btn.textContent = 'Join waitlist';
+          note.textContent = 'Something went wrong. Try again.';
+        }
+      });
+    </script>
   </div>
 </section>
 
