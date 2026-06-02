@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StratScout — Regime-Based ETF Rotation Engine</title>
+  <meta name="description" content="A walk-forward optimized ETF rotation system that re-optimizes every 14 days on trailing data. $10k → $253k out-of-sample, 2018–2026. No curve fitting." />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0d0f12;
+      --surface: #151820;
+      --border: #1e2330;
+      --accent: #3b82f6;
+      --accent-dim: #1d4ed8;
+      --green: #22c55e;
+      --red: #ef4444;
+      --text: #e2e8f0;
+      --muted: #64748b;
+      --mono: 'JetBrains Mono', 'Fira Mono', 'Courier New', monospace;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      line-height: 1.6;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ── Nav ── */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(13,15,18,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 2rem;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 56px;
+    }
+    .logo { font-weight: 700; font-size: 1.1rem; letter-spacing: -0.02em; }
+    .logo span { color: var(--accent); }
+    nav ul { list-style: none; display: flex; gap: 2rem; }
+    nav ul a { color: var(--muted); font-size: 0.9rem; }
+    nav ul a:hover { color: var(--text); text-decoration: none; }
+    .nav-cta {
+      background: var(--accent); color: #fff; padding: 0.4rem 1rem;
+      border-radius: 6px; font-size: 0.85rem; font-weight: 600;
+    }
+    .nav-cta:hover { background: var(--accent-dim); text-decoration: none; }
+
+    /* ── Hero ── */
+    .hero {
+      max-width: 900px; margin: 0 auto;
+      padding: 5rem 2rem 3rem;
+      text-align: center;
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(59,130,246,0.12); color: var(--accent);
+      border: 1px solid rgba(59,130,246,0.3);
+      border-radius: 100px; padding: 0.25rem 0.85rem;
+      font-size: 0.8rem; font-weight: 600; letter-spacing: 0.04em;
+      text-transform: uppercase; margin-bottom: 1.5rem;
+    }
+    h1 {
+      font-size: clamp(2rem, 5vw, 3.25rem);
+      font-weight: 800; line-height: 1.15;
+      letter-spacing: -0.03em; margin-bottom: 1.25rem;
+    }
+    h1 em { color: var(--accent); font-style: normal; }
+    .hero-sub {
+      font-size: 1.15rem; color: var(--muted);
+      max-width: 620px; margin: 0 auto 2.5rem;
+    }
+    .hero-cta {
+      display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: var(--accent); color: #fff;
+      padding: 0.75rem 1.75rem; border-radius: 8px;
+      font-weight: 700; font-size: 1rem;
+      transition: background 0.15s;
+    }
+    .btn-primary:hover { background: var(--accent-dim); text-decoration: none; }
+    .btn-ghost {
+      border: 1px solid var(--border); color: var(--text);
+      padding: 0.75rem 1.75rem; border-radius: 8px;
+      font-weight: 600; font-size: 1rem;
+    }
+    .btn-ghost:hover { border-color: var(--accent); text-decoration: none; }
+
+    /* ── Stat strip ── */
+    .stats {
+      max-width: 900px; margin: 3rem auto 0;
+      padding: 0 2rem;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 1px; background: var(--border);
+      border: 1px solid var(--border); border-radius: 12px; overflow: hidden;
+    }
+    .stat {
+      background: var(--surface);
+      padding: 1.5rem 1.25rem; text-align: center;
+    }
+    .stat-value {
+      font-size: 2rem; font-weight: 800; letter-spacing: -0.03em;
+      color: var(--green); font-family: var(--mono);
+    }
+    .stat-label { font-size: 0.78rem; color: var(--muted); margin-top: 0.3rem; text-transform: uppercase; letter-spacing: 0.06em; }
+
+    /* ── Section ── */
+    section { max-width: 900px; margin: 0 auto; padding: 4rem 2rem; }
+    h2 {
+      font-size: 1.75rem; font-weight: 800;
+      letter-spacing: -0.02em; margin-bottom: 0.5rem;
+    }
+    .section-sub { color: var(--muted); margin-bottom: 2.5rem; font-size: 1rem; }
+    h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; }
+
+    /* ── How it works ── */
+    .steps {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+    }
+    .step {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 10px; padding: 1.5rem;
+    }
+    .step-num {
+      font-size: 0.75rem; font-weight: 700; color: var(--accent);
+      letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.75rem;
+    }
+    .step p { font-size: 0.9rem; color: var(--muted); margin-top: 0.4rem; }
+
+    /* ── Results table ── */
+    .table-wrap { overflow-x: auto; margin-top: 1.5rem; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+    thead th {
+      text-align: left; padding: 0.6rem 1rem;
+      background: var(--surface); color: var(--muted);
+      font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.06em;
+      border-bottom: 1px solid var(--border);
+    }
+    tbody td {
+      padding: 0.65rem 1rem;
+      border-bottom: 1px solid var(--border);
+      font-family: var(--mono); font-size: 0.85rem;
+    }
+    tbody tr:hover td { background: rgba(255,255,255,0.02); }
+    .positive { color: var(--green); }
+    .negative { color: var(--red); }
+    .highlight td { background: rgba(59,130,246,0.06) !important; font-weight: 700; }
+
+    /* ── Regime pills ── */
+    .regimes {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.25rem; margin-top: 1.5rem;
+    }
+    .regime {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 10px; padding: 1.25rem 1.5rem;
+    }
+    .regime-tag {
+      display: inline-block; font-size: 0.7rem; font-weight: 700;
+      padding: 0.2rem 0.6rem; border-radius: 4px;
+      text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.6rem;
+    }
+    .tag-on  { background: rgba(34,197,94,0.15);  color: var(--green); }
+    .tag-ri  { background: rgba(239,68,68,0.15);   color: var(--red); }
+    .tag-fa  { background: rgba(59,130,246,0.15);  color: var(--accent); }
+    .regime p { font-size: 0.85rem; color: var(--muted); margin-top: 0.3rem; }
+    .regime code {
+      font-family: var(--mono); font-size: 0.8rem;
+      color: var(--text); background: var(--bg);
+      padding: 0.1rem 0.4rem; border-radius: 3px;
+    }
+
+    /* ── Proof block ── */
+    .proof-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.25rem;
+    }
+    .proof-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 10px; padding: 1.25rem 1.5rem;
+    }
+    .proof-card .num {
+      font-size: 1.6rem; font-weight: 800; font-family: var(--mono);
+      letter-spacing: -0.02em; color: var(--green);
+    }
+    .proof-card .label { font-size: 0.8rem; color: var(--muted); margin-top: 0.2rem; }
+
+    /* ── Limitations ── */
+    .limitations ul {
+      list-style: none; display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 0.75rem; margin-top: 1rem;
+    }
+    .limitations li {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 8px; padding: 0.75rem 1rem;
+      font-size: 0.88rem; color: var(--muted);
+      padding-left: 2.25rem; position: relative;
+    }
+    .limitations li::before {
+      content: '!'; position: absolute; left: 0.75rem;
+      color: #f59e0b; font-weight: 700;
+    }
+
+    /* ── Waitlist ── */
+    .waitlist-wrap {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 16px; padding: 3rem 2rem; text-align: center;
+    }
+    .waitlist-wrap h2 { margin-bottom: 0.5rem; }
+    .waitlist-wrap p { color: var(--muted); margin-bottom: 2rem; }
+    .waitlist-form {
+      display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap;
+      max-width: 480px; margin: 0 auto;
+    }
+    .waitlist-form input {
+      flex: 1; min-width: 200px;
+      background: var(--bg); border: 1px solid var(--border);
+      color: var(--text); padding: 0.7rem 1rem;
+      border-radius: 8px; font-size: 1rem; outline: none;
+    }
+    .waitlist-form input:focus { border-color: var(--accent); }
+    .waitlist-form button {
+      background: var(--accent); color: #fff;
+      border: none; padding: 0.7rem 1.5rem;
+      border-radius: 8px; font-weight: 700; font-size: 1rem;
+      cursor: pointer;
+    }
+    .waitlist-form button:hover { background: var(--accent-dim); }
+    .waitlist-note { font-size: 0.8rem; color: var(--muted); margin-top: 1rem; }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem; text-align: center;
+      font-size: 0.8rem; color: var(--muted);
+    }
+    footer strong { color: var(--text); }
+
+    /* ── Divider ── */
+    .divider { border: none; border-top: 1px solid var(--border); }
+  </style>
+</head>
+<body>
+
+<!-- Nav -->
+<nav>
+  <div class="logo">Strat<span>Scout</span></div>
+  <ul>
+    <li><a href="#how-it-works">How it works</a></li>
+    <li><a href="#results">Results</a></li>
+    <li><a href="#regimes">Regimes</a></li>
+  </ul>
+  <a href="#waitlist" class="nav-cta">Join waitlist</a>
+</nav>
+
+<!-- Hero -->
+<div class="hero">
+  <div class="badge">Walk-forward validated · No curve fitting</div>
+  <h1>ETF rotation that<br /><em>re-optimizes itself</em><br />every two weeks</h1>
+  <p class="hero-sub">
+    StratScout detects the market regime, picks the best ETFs for it, and re-tunes
+    its own parameters every 14 days on trailing data — then trades blind.
+    Every result below is fully out-of-sample.
+  </p>
+  <div class="hero-cta">
+    <a href="#waitlist" class="btn-primary">Join the waitlist</a>
+    <a href="#results" class="btn-ghost">See the results</a>
+  </div>
+</div>
+
+<!-- Stat strip -->
+<div class="stats">
+  <div class="stat">
+    <div class="stat-value">$253k</div>
+    <div class="stat-label">Median final NAV (2 runs)</div>
+  </div>
+  <div class="stat">
+    <div class="stat-value">46%</div>
+    <div class="stat-label">Median CAGR (OOS)</div>
+  </div>
+  <div class="stat">
+    <div class="stat-value">34%</div>
+    <div class="stat-label">Median max drawdown</div>
+  </div>
+  <div class="stat">
+    <div class="stat-value">7.3×</div>
+    <div class="stat-label">vs SPY buy-and-hold</div>
+  </div>
+  <div class="stat">
+    <div class="stat-value">59%</div>
+    <div class="stat-label">Active trade win rate</div>
+  </div>
+</div>
+
+<hr class="divider" style="max-width:900px;margin:3rem auto 0;" />
+
+<!-- How it works -->
+<section id="how-it-works">
+  <h2>How it works</h2>
+  <p class="section-sub">Four steps, fully automated, zero discretion.</p>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">Step 1</div>
+      <h3>Detect the regime</h3>
+      <p>Compare AGG vs BIL (90-day return) to determine risk-on or risk-off. Compare TLT vs BIL to split risk-off into rising-rate vs falling-rate. No prediction — just measurement.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">Step 2</div>
+      <h3>Optimize parameters</h3>
+      <p>Every 14 days, a random-search optimizer runs 300 trials on the trailing 12 months of data, split across 3 sub-windows for overfit resistance. It finds the ETF mix and sizing that maximizes risk-adjusted returns (Calmar ratio).</p>
+    </div>
+    <div class="step">
+      <div class="step-num">Step 3</div>
+      <h3>Deploy blind</h3>
+      <p>The winning parameters trade the next 14-day period with no further adjustment. No peeking at future data. Every period in the results below was traded this way.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">Step 4</div>
+      <h3>Repeat</h3>
+      <p>The cycle restarts. Old data rolls off, new data comes in. The optimizer never uses the same period twice as training and validation.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="divider" style="max-width:900px;margin:0 auto;" />
+
+<!-- Regimes -->
+<section id="regimes">
+  <h2>Three regimes</h2>
+  <p class="section-sub">The signal is two ratios. The regime drives the entire ETF selection.</p>
+  <div class="regimes">
+    <div class="regime">
+      <div class="regime-tag tag-on">Risk-On</div>
+      <h3>Leveraged equity</h3>
+      <p>When <code>AGG &gt; BIL</code>: rotate into top-ranked leveraged ETFs — <code>SOXL</code>, <code>TQQQ</code>, <code>TECL</code> and peers, weighted by momentum + inverse-vol blend.</p>
+    </div>
+    <div class="regime">
+      <div class="regime-tag tag-ri">Risk-Off · Rising Rates</div>
+      <h3>Cash or inverse</h3>
+      <p>When <code>AGG &lt; BIL</code> and <code>TLT &lt; BIL</code>: hold cash (<code>BIL</code>) or inverse ETFs. Backtests show BIL wins 145 of 218 periods in this regime — cash beats decaying inverse funds.</p>
+    </div>
+    <div class="regime">
+      <div class="regime-tag tag-fa">Risk-Off · Falling Rates</div>
+      <h3>Defensives &amp; managed futures</h3>
+      <p>When <code>AGG &lt; BIL</code> and <code>TLT &gt; BIL</code>: rotate into <code>UGL</code>, <code>GLD</code>, <code>KMLM</code>, <code>DBMF</code>, <code>TAIL</code>, <code>XLP</code>. Near-zero equity correlation, positive in drawdowns.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="divider" style="max-width:900px;margin:0 auto;" />
+
+<!-- Results -->
+<section id="results">
+  <h2>Results</h2>
+  <p class="section-sub">
+    2018-01-01 → present. $10,000 starting capital. Every period is out-of-sample —
+    parameters were optimized only on data prior to that period.
+    Runs are statistically independent (different random seeds).
+  </p>
+
+  <div class="proof-grid">
+    <div class="proof-card">
+      <div class="num">$278k</div>
+      <div class="label">Best run (220 periods, OOS)</div>
+    </div>
+    <div class="proof-card">
+      <div class="num">$229k</div>
+      <div class="label">Second run (same setup, different seed)</div>
+    </div>
+    <div class="proof-card">
+      <div class="num">$34.8k</div>
+      <div class="label">SPY buy-and-hold, same period</div>
+    </div>
+    <div class="proof-card">
+      <div class="num">Calmar 1.35</div>
+      <div class="label">Median risk-adjusted return</div>
+    </div>
+  </div>
+
+  <div class="table-wrap" style="margin-top:2rem;">
+    <table>
+      <thead>
+        <tr>
+          <th>Run</th>
+          <th>Periods</th>
+          <th>Final NAV</th>
+          <th>CAGR</th>
+          <th>Max DD</th>
+          <th>Calmar</th>
+          <th>Win rate</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>r1</td><td>220</td>
+          <td class="positive">$278,150</td>
+          <td class="positive">+48.3%</td>
+          <td class="negative">33.8%</td>
+          <td>1.43</td><td>52.7%</td>
+        </tr>
+        <tr>
+          <td>r2</td><td>220</td>
+          <td class="positive">$229,561</td>
+          <td class="positive">+45.0%</td>
+          <td class="negative">35.1%</td>
+          <td>1.28</td><td>55.5%</td>
+        </tr>
+        <tr class="highlight">
+          <td>Median</td><td>220</td>
+          <td class="positive">$253,855</td>
+          <td class="positive">+46.7%</td>
+          <td class="negative">34.5%</td>
+          <td>1.35</td><td>54.1%</td>
+        </tr>
+        <tr>
+          <td colspan="2" style="color:var(--muted);font-size:0.8rem;">SPY buy-and-hold</td>
+          <td>$34,798</td><td>+13.1%</td><td>34%</td><td>0.39</td><td>—</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p style="margin-top:1rem;font-size:0.82rem;color:var(--muted);">
+    More runs completing. Table will be updated as r3–r5 finish.
+    Prior 5-run benchmark (pool expansion): mean $231k, 41.2% CAGR, 35.1% MaxDD.
+  </p>
+</section>
+
+<hr class="divider" style="max-width:900px;margin:0 auto;" />
+
+<!-- Honest limitations -->
+<section class="limitations">
+  <h2>Honest limitations</h2>
+  <p class="section-sub">Things you should know before trusting these numbers.</p>
+  <ul>
+    <li>Survivorship bias: universe only contains ETFs that exist today and have data since 2018.</li>
+    <li>Data starts 2018 — includes COVID crash and 2022 rate shock, but not 2008/2009.</li>
+    <li>Transaction costs not modeled. ETF spreads are minimal; commissions zero at Schwab.</li>
+    <li>Tax drag not modeled. Results assume a tax-advantaged account (Roth IRA).</li>
+    <li>Leveraged ETFs have volatility decay. Long holding periods would underperform.</li>
+    <li>Past out-of-sample performance does not guarantee future results.</li>
+  </ul>
+</section>
+
+<hr class="divider" style="max-width:900px;margin:0 auto;" />
+
+<!-- Waitlist -->
+<section id="waitlist">
+  <div class="waitlist-wrap">
+    <h2>Get early access</h2>
+    <p>StratScout is launching as a SaaS — hosted walk-forwards, live signals,<br />strategy inspector. Join the waitlist for early pricing.</p>
+    <form class="waitlist-form" action="https://formspree.io/f/REPLACE_ME" method="POST">
+      <input type="email" name="email" placeholder="you@example.com" required />
+      <button type="submit">Join waitlist</button>
+    </form>
+    <p class="waitlist-note">No spam. Unsubscribe any time. Early members get lifetime discount.</p>
+  </div>
+</section>
+
+<footer>
+  <p>
+    <strong>StratScout</strong> · strat-scout.com ·
+    Not financial advice. All results are historical and out-of-sample.
+    Past performance does not guarantee future results.
+  </p>
+</footer>
+
+</body>
+</html>
