@@ -78,6 +78,19 @@
     .hl td { background: rgba(59,130,246,0.06) !important; font-weight: 700; }
 
     footer { border-top: 1px solid var(--border); padding: 2rem; text-align: center; font-size: 0.8rem; color: var(--muted); }
+
+    .accordion { border: 1px solid var(--border); border-radius: 10px; overflow: hidden; margin: 1.5rem 0; }
+    .accordion-header { width: 100%; background: var(--surface); border: none; padding: 1rem 1.25rem; display: flex; justify-content: space-between; align-items: center; cursor: pointer; color: var(--text); font-size: 0.95rem; font-weight: 600; text-align: left; }
+    .accordion-header:hover { background: rgba(255,255,255,0.03); }
+    .accordion-icon { color: var(--accent); font-size: 1.1rem; transition: transform 0.2s; flex-shrink: 0; }
+    .accordion-header.open .accordion-icon { transform: rotate(45deg); }
+    .accordion-body { display: none; padding: 1.25rem 1.5rem; background: var(--bg); border-top: 1px solid var(--border); }
+    .accordion-body.open { display: block; }
+    .accordion-body h3 { margin-top: 1.25rem; }
+    .accordion-body h3:first-child { margin-top: 0; }
+    .accordion-body ul { color: var(--muted); padding-left: 1.5rem; margin-bottom: 1rem; line-height: 2; }
+    .accordion-body table { font-size: 0.82rem; }
+    .accordion-body code { font-family: var(--mono); background: var(--surface); padding: 0.1rem 0.4rem; border-radius: 3px; font-size: 0.82rem; color: var(--text); }
   </style>
 </head>
 <body>
@@ -122,9 +135,9 @@
     <h3>Regime detection</h3>
     <p>Before picking ETFs, the system classifies the current market regime using two ratio signals:</p>
     <ul style="color:var(--muted);padding-left:1.5rem;margin-bottom:1rem;line-height:2;">
-      <li><strong style="color:var(--text);">AGG vs BIL</strong> — if bonds outperform cash over 90 days: <strong style="color:var(--green);">Risk-On</strong>. Rotate into leveraged equity ETFs.</li>
-      <li><strong style="color:var(--text);">TLT vs BIL</strong> (when risk-off) — if long treasuries underperform cash: <strong style="color:var(--red);">Risk-Off Rising Rates</strong>. Hold cash or inverse ETFs.</li>
-      <li><strong style="color:var(--text);">Otherwise</strong> — <strong style="color:var(--accent);">Risk-Off Falling Rates</strong>. Rotate into gold, managed futures, tail-risk hedges.</li>
+      <li><strong style="color:var(--text);">AGG vs BIL</strong>: if bonds outperform cash over 90 days: <strong style="color:var(--green);">Risk-On</strong>. Rotate into leveraged equity ETFs.</li>
+      <li><strong style="color:var(--text);">TLT vs BIL</strong> (when risk-off): if long treasuries underperform cash: <strong style="color:var(--red);">Risk-Off Rising Rates</strong>. Hold cash or inverse ETFs.</li>
+      <li><strong style="color:var(--text);">Otherwise</strong>: <strong style="color:var(--accent);">Risk-Off Falling Rates</strong>. Rotate into gold, managed futures, tail-risk hedges.</li>
     </ul>
 
     <div class="chart-wrap">
@@ -261,7 +274,51 @@
     </div>
 
     <p>2.6x higher median NAV and 3.8x better Calmar over the hardest 3-year window in the dataset. Full 2018-present comparison is currently running.</p>
-    <p><a href="docs/hof-explainer.md">Read the full HoF explainer including overfitting risk</a></p>
+    <div class="accordion">
+      <button class="accordion-header" onclick="toggleAccordion(this)">
+        Full explainer: how seeds are selected, overfitting risk, and when to enable
+        <span class="accordion-icon">+</span>
+      </button>
+      <div class="accordion-body">
+        <h3>How are seeds selected?</h3>
+        <p>Seeds are matched by three criteria:</p>
+        <ul>
+          <li><strong style="color:var(--text);">Actual regime</strong>: AGG/BIL and TLT/BIL ratios determine whether you are in risk-on, risk-off rising rates, or risk-off falling rates. Seeds from the same regime are prioritized.</li>
+          <li><strong style="color:var(--text);">Performance quality</strong>: only periods with val_return above 2% and Calmar above 0.8 qualify. Marginal wins do not seed forward.</li>
+          <li><strong style="color:var(--text);">Recency</strong>: seeds are sorted by Calmar ratio descending so the best risk-adjusted performers come first.</li>
+        </ul>
+        <p>All seeds are strictly date-gated: <code>WHERE month &lt; current_period</code>. No future data can leak in.</p>
+
+        <h3>Does this cause overfitting?</h3>
+        <p>It can. The guardrails that keep it honest:</p>
+        <ul>
+          <li>Seeds only count toward ~8% of trials (25 out of 300). The other 275 are pure random, keeping the search space wide.</li>
+          <li>Seeds compete on merit; scored against the same 3 training sub-windows as every random trial. If last period's params do not generalize, they lose to random and do not get used.</li>
+          <li>Regime gating prevents rising-rate params from bleeding into risk-on periods and vice versa.</li>
+        </ul>
+        <p><strong style="color:var(--text);">The real risk: consecutive similar regimes:</strong> If you are in risk-on for 10 straight periods, the same params keep winning and keep getting seeded. The optimizer reinforces a narrow corridor. When the regime flips it may be slower to adapt. This is the subtler form of overfitting. Not cheating on data, but converging prematurely on a local optimum during a persistent regime. Mitigation in progress: capping how many times the same param fingerprint can appear in the HoF within a rolling window.</p>
+
+        <h3>Empirical result (2021-2023 hard window)</h3>
+        <table>
+          <thead><tr><th></th><th>HoF Seeded (25/300 trials)</th><th>Baseline (no seeds)</th></tr></thead>
+          <tbody>
+            <tr><td>Median NAV</td><td class="pos">$33,408</td><td class="neg">$13,067</td></tr>
+            <tr><td>Median CAGR</td><td class="pos">+48.9%</td><td class="neg">+9.3%</td></tr>
+            <tr><td>Median Max DD</td><td class="neg">40.4%</td><td>30.9%</td></tr>
+            <tr><td>Median Calmar</td><td class="pos">1.21</td><td class="neg">0.32</td></tr>
+          </tbody>
+        </table>
+
+        <h3>Should I turn it on?</h3>
+        <p>Default is off (<code>--hof-seeds 0</code>). Turn it on if you have at least 1-2 full runs worth of HoF data (run <code>build_hof.py</code> first), are willing to accept slightly wider drawdowns for meaningfully higher returns, and understand the consecutive-regime risk. Recommended value: <code>--hof-seeds 20</code> to <code>--hof-seeds 30</code>. Above 50 starts to crowd out random exploration.</p>
+      </div>
+    </div>
+    <script>
+    function toggleAccordion(btn) {
+      btn.classList.toggle('open');
+      btn.nextElementSibling.classList.toggle('open');
+    }
+    </script>
   </div>
 
   <div class="chapter" id="live">
