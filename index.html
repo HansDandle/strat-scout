@@ -453,20 +453,20 @@
 
   <div class="proof-grid">
     <div class="proof-card">
-      <div class="num">$278k</div>
-      <div class="label">Best run (220 periods, OOS)</div>
+      <div class="num">$215k</div>
+      <div class="label">Median NAV — Random Trials (10 runs)</div>
     </div>
     <div class="proof-card">
-      <div class="num">$229k</div>
-      <div class="label">Second run (same setup, different seed)</div>
+      <div class="num">$115k</div>
+      <div class="label">Median NAV — Random Universe (10 runs)</div>
     </div>
     <div class="proof-card">
       <div class="num">$34.8k</div>
       <div class="label">SPY buy-and-hold, same period</div>
     </div>
     <div class="proof-card">
-      <div class="num">Calmar 1.35</div>
-      <div class="label">Median risk-adjusted return</div>
+      <div class="num">1.14</div>
+      <div class="label">Median Calmar — Random Trials</div>
     </div>
   </div>
 
@@ -474,40 +474,38 @@
     <table>
       <thead>
         <tr>
-          <th>Run</th>
-          <th>Periods</th>
-          <th>Final NAV</th>
-          <th>CAGR</th>
-          <th>Max DD</th>
-          <th>Calmar</th>
-          <th>Win rate</th>
+          <th>Configuration</th>
+          <th>Median NAV</th>
+          <th>Median CAGR</th>
+          <th>Median Max DD</th>
+          <th>Median Calmar</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>r1</td><td>220</td>
-          <td class="positive">$278,150</td>
-          <td class="positive">+48.3%</td>
-          <td class="negative">33.8%</td>
-          <td>1.43</td><td>52.7%</td>
+          <td>Random Universe</td>
+          <td class="positive">$114,700</td>
+          <td class="positive">+31.1%</td>
+          <td class="negative">36.5%</td>
+          <td>0.92</td>
         </tr>
         <tr>
-          <td>r2</td><td>220</td>
-          <td class="positive">$229,561</td>
-          <td class="positive">+45.0%</td>
-          <td class="negative">35.1%</td>
-          <td>1.28</td><td>55.5%</td>
+          <td>Random Trials</td>
+          <td class="positive">$214,897</td>
+          <td class="positive">+44.4%</td>
+          <td class="negative">37.4%</td>
+          <td>1.14</td>
         </tr>
         <tr class="highlight">
-          <td>Median</td><td>220</td>
-          <td class="positive">$253,855</td>
-          <td class="positive">+46.7%</td>
-          <td class="negative">34.5%</td>
-          <td>1.35</td><td>54.1%</td>
+          <td>HoF Seeded</td>
+          <td style="color:var(--muted);font-style:italic;">in progress</td>
+          <td style="color:var(--muted);font-style:italic;">—</td>
+          <td style="color:var(--muted);font-style:italic;">—</td>
+          <td style="color:var(--muted);font-style:italic;">—</td>
         </tr>
         <tr>
-          <td colspan="2" style="color:var(--muted);font-size:0.8rem;">SPY buy-and-hold</td>
-          <td>$34,798</td><td>+13.1%</td><td>34%</td><td>0.39</td><td>-</td>
+          <td>SPY buy-and-hold</td>
+          <td>$34,798</td><td>+13.1%</td><td>34%</td><td>0.39</td>
         </tr>
       </tbody>
     </table>
