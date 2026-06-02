@@ -270,10 +270,11 @@
   (function(){
     var cv=document.getElementById('hero-anim'), cx=cv.getContext('2d');
     var W=700, H=150, CY=52, CH=78, CW=32, GAP=8, SPD=0.9;
-    var FX=160; // figure x (stationary)
+    var FX_MIN=100, FX_HOME=350, FX_MAX=600;
+    var figX=FX_HOME, figY, targetY;
     function py(p){return CY+CH*(1-Math.max(0,Math.min(1,p)));}
+    figY=py(0.55); targetY=figY;
 
-    // procedural candle generation
     var candles=[], lastC=0.55, nextX=0;
     function mkCandle(x,prev){
       var d=(Math.random()-0.44)*0.09;
@@ -283,19 +284,14 @@
       var l=Math.min(o,c)-Math.random()*0.05; l=Math.max(0.06,l);
       return {x:x,o:o,h:h,l:l,c:c};
     }
-    // seed enough candles to fill screen
     while(nextX < W+CW){
       var cd=mkCandle(nextX,lastC); candles.push(cd); lastC=cd.c; nextX+=CW+GAP;
     }
 
-    // smooth figure y
-    var figY=py(0.55), targetY=figY;
-
     var t=0;
     function frame(){
-      // scroll candles
+      // scroll candles at constant speed
       for(var i=0;i<candles.length;i++) candles[i].x-=SPD;
-      // remove off-screen left, add new right
       while(candles.length && candles[0].x < -CW-10) candles.shift();
       while(candles[candles.length-1].x < W+CW){
         var last=candles[candles.length-1];
@@ -305,11 +301,20 @@
       // find candle under figure
       var under=null, minDist=9999;
       for(var i=0;i<candles.length;i++){
-        var d=Math.abs(candles[i].x+CW/2-FX);
+        var d=Math.abs(candles[i].x+CW/2-figX);
         if(d<minDist){minDist=d;under=candles[i];}
       }
+
+      // drift figure x: right on green, left on red
+      if(under){
+        var isGreen=under.c>=under.o;
+        figX += isGreen ? 0.4 : -0.25;
+        figX = Math.max(FX_MIN, Math.min(FX_MAX, figX));
+      }
+
+      // y follows candle top
       if(under) targetY=py(under.h);
-      figY+=(targetY-figY)*0.12; // ease
+      figY+=(targetY-figY)*0.12;
 
       cx.clearRect(0,0,W,H);
 
@@ -324,23 +329,19 @@
         cx.fillRect(cd.x+2,by,CW-4,bh);
       }
 
-      // stick figure (stationary at FX, y follows candle tops)
+      // stick figure — walk speed also reflects direction
       var s=12, wc=(t*0.14)%(Math.PI*2);
       cx.strokeStyle='#93c5fd'; cx.lineWidth=2.3; cx.lineCap='round';
-      var gy=figY; // ground y
-      // head
-      cx.beginPath(); cx.arc(FX,gy-s*3.1,s*0.58,0,Math.PI*2); cx.stroke();
-      // torso
+      var gy=figY;
+      cx.beginPath(); cx.arc(figX,gy-s*3.1,s*0.58,0,Math.PI*2); cx.stroke();
       var sy=gy-s*2.4, hy=gy-s*1.05;
-      cx.beginPath(); cx.moveTo(FX,sy); cx.lineTo(FX,hy); cx.stroke();
-      // arms swing
+      cx.beginPath(); cx.moveTo(figX,sy); cx.lineTo(figX,hy); cx.stroke();
       var sw=Math.sin(wc)*s*0.9;
-      cx.beginPath(); cx.moveTo(FX,sy+s*0.3); cx.lineTo(FX+sw,sy+s*0.3+s*0.85); cx.stroke();
-      cx.beginPath(); cx.moveTo(FX,sy+s*0.3); cx.lineTo(FX-sw,sy+s*0.3+s*0.85); cx.stroke();
-      // legs
+      cx.beginPath(); cx.moveTo(figX,sy+s*0.3); cx.lineTo(figX+sw,sy+s*0.3+s*0.85); cx.stroke();
+      cx.beginPath(); cx.moveTo(figX,sy+s*0.3); cx.lineTo(figX-sw,sy+s*0.3+s*0.85); cx.stroke();
       var lw=Math.sin(wc)*s*0.8;
-      cx.beginPath(); cx.moveTo(FX,hy); cx.lineTo(FX+lw,hy+s*0.9); cx.lineTo(FX+lw+Math.sin(wc+0.5)*s*0.38,gy); cx.stroke();
-      cx.beginPath(); cx.moveTo(FX,hy); cx.lineTo(FX-lw,hy+s*0.9); cx.lineTo(FX-lw-Math.sin(wc+0.5)*s*0.38,gy); cx.stroke();
+      cx.beginPath(); cx.moveTo(figX,hy); cx.lineTo(figX+lw,hy+s*0.9); cx.lineTo(figX+lw+Math.sin(wc+0.5)*s*0.38,gy); cx.stroke();
+      cx.beginPath(); cx.moveTo(figX,hy); cx.lineTo(figX-lw,hy+s*0.9); cx.lineTo(figX-lw-Math.sin(wc+0.5)*s*0.38,gy); cx.stroke();
 
       t++; requestAnimationFrame(frame);
     }
