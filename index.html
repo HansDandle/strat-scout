@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>StratScout — Regime-Based ETF Rotation Engine</title>
+  <title>StratScout - Regime-Based ETF Rotation Engine</title>
   <meta name="description" content="A walk-forward optimized ETF rotation system that re-optimizes every 14 days on trailing data. $10k → $253k out-of-sample, 2018–2026. No curve fitting." />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -351,7 +351,7 @@
   <h1>ETF rotation that<br /><em>re-optimizes itself</em><br />every two weeks</h1>
   <p class="hero-sub">
     StratScout detects the market regime, picks the best ETFs for it, and re-tunes
-    its own parameters every 14 days on trailing data — then trades blind.
+    its own parameters every 14 days on trailing data, then trades blind.
     Every result below is fully out-of-sample.
   </p>
   <div class="hero-cta">
@@ -394,7 +394,7 @@
     <div class="step">
       <div class="step-num">Step 1</div>
       <h3>Detect the regime</h3>
-      <p>Compare AGG vs BIL (90-day return) to determine risk-on or risk-off. Compare TLT vs BIL to split risk-off into rising-rate vs falling-rate. No prediction — just measurement.</p>
+      <p>Compare AGG vs BIL (90-day return) to determine risk-on or risk-off. Compare TLT vs BIL to split risk-off into rising-rate vs falling-rate. No prediction - just measurement.</p>
     </div>
     <div class="step">
       <div class="step-num">Step 2</div>
@@ -424,12 +424,12 @@
     <div class="regime">
       <div class="regime-tag tag-on">Risk-On</div>
       <h3>Leveraged equity</h3>
-      <p>When <code>AGG &gt; BIL</code>: rotate into top-ranked leveraged ETFs — <code>SOXL</code>, <code>TQQQ</code>, <code>TECL</code> and peers, weighted by momentum + inverse-vol blend.</p>
+      <p>When <code>AGG &gt; BIL</code>: rotate into top-ranked leveraged ETFs - <code>SOXL</code>, <code>TQQQ</code>, <code>TECL</code> and peers, weighted by momentum + inverse-vol blend.</p>
     </div>
     <div class="regime">
       <div class="regime-tag tag-ri">Risk-Off · Rising Rates</div>
       <h3>Cash or inverse</h3>
-      <p>When <code>AGG &lt; BIL</code> and <code>TLT &lt; BIL</code>: hold cash (<code>BIL</code>) or inverse ETFs. Backtests show BIL wins 145 of 218 periods in this regime — cash beats decaying inverse funds.</p>
+      <p>When <code>AGG &lt; BIL</code> and <code>TLT &lt; BIL</code>: hold cash (<code>BIL</code>) or inverse ETFs. Backtests show BIL wins 145 of 218 periods in this regime - cash beats decaying inverse funds.</p>
     </div>
     <div class="regime">
       <div class="regime-tag tag-fa">Risk-Off · Falling Rates</div>
@@ -445,7 +445,7 @@
 <section id="results">
   <h2>Results</h2>
   <p class="section-sub">
-    2018-01-01 → present. $10,000 starting capital. Every period is out-of-sample —
+    2018-01-01 → present. $10,000 starting capital. Every period is out-of-sample, meaning
     parameters were optimized only on data prior to that period.
     Runs are statistically independent (different random seeds).
   </p>
@@ -506,7 +506,7 @@
         </tr>
         <tr>
           <td colspan="2" style="color:var(--muted);font-size:0.8rem;">SPY buy-and-hold</td>
-          <td>$34,798</td><td>+13.1%</td><td>34%</td><td>0.39</td><td>—</td>
+          <td>$34,798</td><td>+13.1%</td><td>34%</td><td>0.39</td><td>-</td>
         </tr>
       </tbody>
     </table>
@@ -526,12 +526,13 @@
   <p class="section-sub">Things you should know before trusting these numbers.</p>
   <ul>
     <li>Survivorship bias: universe only contains ETFs that exist today and have data since 2018.</li>
-    <li>Data starts 2018 — includes COVID crash and 2022 rate shock, but not 2008/2009.</li>
+    <li>Primary test suite starts 2018: includes COVID crash and 2022 rate shock.* </li>
     <li>Transaction costs not modeled. ETF spreads are minimal; commissions zero at Schwab.</li>
     <li>Tax drag not modeled. Results assume a tax-advantaged account (Roth IRA).</li>
     <li>Leveraged ETFs have volatility decay. Long holding periods would underperform.</li>
     <li>Past out-of-sample performance does not guarantee future results.</li>
   </ul>
+  <p style="font-size:0.78rem;color:var(--muted);margin-top:1rem;">* One extended run covers 2007-present (494 periods). During the 2008-2009 crisis window, the strategy grew $10k to $29k with a 34.5% max drawdown, as the regime signal rotated out of equities early. That run uses a partially different ETF universe since several current instruments did not exist pre-2010.</p>
 </section>
 
 <hr class="divider" style="max-width:900px;margin:0 auto;" />
@@ -540,7 +541,7 @@
 <section id="waitlist">
   <div class="waitlist-wrap">
     <h2>Get early access</h2>
-    <p>StratScout is launching as a SaaS — hosted walk-forwards, live signals,<br />strategy inspector. Join the waitlist for early pricing.</p>
+    <p>StratScout is launching as a SaaS - hosted walk-forwards, live signals,<br />strategy inspector. Join the waitlist for early pricing.</p>
     <form class="waitlist-form" id="waitlist-form">
       <input type="email" name="email" id="waitlist-email" placeholder="you@example.com" required />
       <button type="submit" id="waitlist-btn">Join waitlist</button>
