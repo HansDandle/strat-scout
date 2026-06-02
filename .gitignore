@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+
+# Data — never commit feather files or DBs
+data/
+*.feather
+*.db
+*.db-shm
+*.db-wal
+
+# Credentials — never commit these
+trader_config.json
+schwab_token.json
+*.pem
+.env
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
