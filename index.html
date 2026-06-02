@@ -264,6 +264,88 @@
 
 <!-- Hero -->
 <div class="hero">
+  <canvas id="hero-anim" width="700" height="150" style="width:100%;max-width:700px;height:auto;display:block;margin:0 auto 1.25rem;"></canvas>
+  <script>
+  (function(){
+    var cv=document.getElementById('hero-anim'), cx=cv.getContext('2d');
+    var W=700, H=150, CY=52, CH=78, CW=32, GAP=8, SPD=0.9;
+    var FX=160; // figure x (stationary)
+    function py(p){return CY+CH*(1-Math.max(0,Math.min(1,p)));}
+
+    // procedural candle generation
+    var candles=[], lastC=0.55, nextX=0;
+    function mkCandle(x,prev){
+      var d=(Math.random()-0.44)*0.09;
+      var c=Math.max(0.12,Math.min(0.93,prev+d));
+      var o=prev;
+      var h=Math.max(o,c)+Math.random()*0.07; h=Math.min(0.96,h);
+      var l=Math.min(o,c)-Math.random()*0.05; l=Math.max(0.06,l);
+      return {x:x,o:o,h:h,l:l,c:c};
+    }
+    // seed enough candles to fill screen
+    while(nextX < W+CW){
+      var cd=mkCandle(nextX,lastC); candles.push(cd); lastC=cd.c; nextX+=CW+GAP;
+    }
+
+    // smooth figure y
+    var figY=py(0.55), targetY=figY;
+
+    var t=0;
+    function frame(){
+      // scroll candles
+      for(var i=0;i<candles.length;i++) candles[i].x-=SPD;
+      // remove off-screen left, add new right
+      while(candles.length && candles[0].x < -CW-10) candles.shift();
+      while(candles[candles.length-1].x < W+CW){
+        var last=candles[candles.length-1];
+        var nc=mkCandle(last.x+CW+GAP,last.c); candles.push(nc);
+      }
+
+      // find candle under figure
+      var under=null, minDist=9999;
+      for(var i=0;i<candles.length;i++){
+        var d=Math.abs(candles[i].x+CW/2-FX);
+        if(d<minDist){minDist=d;under=candles[i];}
+      }
+      if(under) targetY=py(under.h);
+      figY+=(targetY-figY)*0.12; // ease
+
+      cx.clearRect(0,0,W,H);
+
+      // draw candles
+      for(var i=0;i<candles.length;i++){
+        var cd=candles[i], cx_=cd.x+CW/2;
+        var green=cd.c>=cd.o, col=green?'#22c55e':'#ef4444';
+        cx.strokeStyle=col; cx.lineWidth=1.5;
+        cx.beginPath(); cx.moveTo(cx_,py(cd.h)); cx.lineTo(cx_,py(cd.l)); cx.stroke();
+        cx.fillStyle=col;
+        var by=py(Math.max(cd.o,cd.c)), bh=Math.max(2,Math.abs(py(cd.o)-py(cd.c)));
+        cx.fillRect(cd.x+2,by,CW-4,bh);
+      }
+
+      // stick figure (stationary at FX, y follows candle tops)
+      var s=12, wc=(t*0.14)%(Math.PI*2);
+      cx.strokeStyle='#93c5fd'; cx.lineWidth=2.3; cx.lineCap='round';
+      var gy=figY; // ground y
+      // head
+      cx.beginPath(); cx.arc(FX,gy-s*3.1,s*0.58,0,Math.PI*2); cx.stroke();
+      // torso
+      var sy=gy-s*2.4, hy=gy-s*1.05;
+      cx.beginPath(); cx.moveTo(FX,sy); cx.lineTo(FX,hy); cx.stroke();
+      // arms swing
+      var sw=Math.sin(wc)*s*0.9;
+      cx.beginPath(); cx.moveTo(FX,sy+s*0.3); cx.lineTo(FX+sw,sy+s*0.3+s*0.85); cx.stroke();
+      cx.beginPath(); cx.moveTo(FX,sy+s*0.3); cx.lineTo(FX-sw,sy+s*0.3+s*0.85); cx.stroke();
+      // legs
+      var lw=Math.sin(wc)*s*0.8;
+      cx.beginPath(); cx.moveTo(FX,hy); cx.lineTo(FX+lw,hy+s*0.9); cx.lineTo(FX+lw+Math.sin(wc+0.5)*s*0.38,gy); cx.stroke();
+      cx.beginPath(); cx.moveTo(FX,hy); cx.lineTo(FX-lw,hy+s*0.9); cx.lineTo(FX-lw-Math.sin(wc+0.5)*s*0.38,gy); cx.stroke();
+
+      t++; requestAnimationFrame(frame);
+    }
+    frame();
+  })();
+  </script>
   <div class="badge">Walk-forward validated · No curve fitting</div>
   <h1>ETF rotation that<br /><em>re-optimizes itself</em><br />every two weeks</h1>
   <p class="hero-sub">
