@@ -254,6 +254,11 @@
       <p>Skip to cash when the optimizer confidence score falls below a threshold. We tested every threshold from 25 to 65. Train score is not predictive of out-of-sample success at any threshold. The filter just kills CAGR.</p>
     </div>
 
+    <div class="killed">
+      <div class="killed-title">X &nbsp; Unleveraged-only pools</div>
+      <p>Four full runs replacing all leveraged ETFs with unleveraged equivalents: QQQ, IWM, sector SPDRs, GLD, SLV. Median NAV came in around $24k over 2018-present, well below SPY buy-and-hold at $34,798. The regime-switching logic works, but the alpha is almost entirely sourced from 2x/3x instruments. Without leverage, switching between sector slices of the market every 14 days cannot overcome the drag from risk-off periods and rebalancing friction. The gate is real; the fuel is leverage.</p>
+    </div>
+
     <div class="chart-wrap">
       <img src="docs/img/experiment_progression.png" alt="Experiment progression - Calmar ratio" />
       <div class="chart-caption">Calmar ratio (CAGR / Max Drawdown) across experiments in research order. Higher is better. The random universe bar is a robustness check, not an attempted improvement.</div>
@@ -274,7 +279,7 @@
       <div class="result-cell"><div class="result-val red">0.32</div><div class="result-label">Baseline Calmar</div></div>
     </div>
 
-    <p>2.6x higher median NAV and 3.8x better Calmar over the hardest 3-year window in the dataset. Full 2018-present comparison is currently running.</p>
+    <p>2.6x higher median NAV and 3.8x better Calmar over the hardest 3-year window in the dataset. Full 2018-present (5 runs, 220 periods each): median $314,970 vs $214,897 for random trials — a 47% higher median NAV with lower max drawdown (29.5% vs 37.4%).</p>
     <div class="accordion">
       <button class="accordion-header" onclick="toggleAccordion(this)">
         Full explainer: how seeds are selected, overfitting risk, and when to enable
